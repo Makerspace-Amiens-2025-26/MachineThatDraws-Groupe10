@@ -4,41 +4,56 @@ title: Accueil
 nav_order: 1
 ---
 
-# 🤖 Machine That Draws - Groupe 10
+<div style="text-align: center; border: 2px solid #00d4ff; padding: 20px; border-radius: 10px; background-color: #f0faff; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <span style="font-size: 3em;">🤖</span>
+  <h1 style="color: #007bff; margin-top: 10px;">Machine That Draws - Groupe 10</h1>
+  <p style="font-size: 1.2em; font-style: italic; color: #555;">Le futur du dessin automatisé commence ici.</p>
+</div>
 
 ---
 
-## 👥 Présentation du Groupe
-Bienvenue sur la documentation du projet machine that draws de l'équipe 10.
-Pour ce projet nous avons été 5 :
-* **Louis Bourbon** : [Rôle/Spécialité]
-* **Mathis François** : [Rôle/Spécialité]
-* **Sören Crepin** : [Rôle/Spécialité]
-* **Célian Daix** : [Rôle/Spécialité]
-* **Alexandre Bourel** : [Rôle/Spécialité]
+## 👥 <span style="color: #007bff;">[01] L'ÉQUIPE</span>
+Bienvenue dans le centre de commandement de notre projet. Notre groupe est une synergie de compétences :
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+  <div style="flex: 1; min-width: 200px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background-color: #fafafa; border-left: 5px solid #00d4ff;">
+    <strong>Nom 1</strong><br>
+    <span style="color: #666; font-size: 0.9em;">Spécialité : Mécanique & CAO</span>
+  </div>
+  <div style="flex: 1; min-width: 200px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background-color: #fafafa; border-left: 5px solid #00d4ff;">
+    <strong>Nom 2</strong><br>
+    <span style="color: #666; font-size: 0.9em;">Spécialité : Électronique & Capteurs</span>
+  </div>
+  <div style="flex: 1; min-width: 200px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background-color: #fafafa; border-left: 5px solid #00d4ff;">
+    <strong>Nom 3</strong><br>
+    <span style="color: #666; font-size: 0.9em;">Spécialité : Programmation & IA</span>
+  </div>
+</div>
 
 ---
 
-## 🚀 Le Projet
-Notre mission est de concevoir une machine capable de dessiner toute seul en partant du matériel donné à l'origine.  
-Ce projet allie **mécanique**, **électronique** et **programmation** pour répondre au défi proposé par le MakerSpace.
+## 🚀 <span style="color: #007bff;">[02] LA VISION DU PROJET</span>
+{: .note }
+> **OBJECTIF PRINCIPAL** : Concevoir et prototyper un système robotique capable de transposer des fichiers vectoriels en dessins physiques de haute précision.
+
+Ce projet n'est pas simplement un exercice de robotique. C'est notre exploration de l'intersection entre l'art numérique et la fabrication mécanique. Nous visons à créer une machine **modulaire**, **précise**, et **intuitive**.
 
 ---
 
-## 🖼️ Notre Poster
-Voici le visuel récapitulatif de notre concept :
+## 🖼️ <span style="color: #007bff;">[03] LE POSTER CONCEPTUEL</span>
+Le visuel récapitulatif de notre architecture technique et de notre design :
 
-![Poster de notre projet](./images/poster.jpg)
-
-> *Note : Assure-toi que ton image s'appelle bien "poster.jpg" et qu'elle est dans le dossier "images".*
+<div style="border: 2px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="./images/poster.jpg" alt="Poster Conception Futuriste" style="width: 100%; height: auto;">
+</div>
 
 ---
 
-## 📺 Vidéo de Présentation
-Découvrez notre machine en action à travers cette courte vidéo :
+## 📺 <span style="color: #007bff;">[04] VIDÉO DE PRÉSENTATION</span>
+Découvrez notre prototype en action. Admirez la précision des mouvements et la fluidité de l'exécution.
 
-<div style="text-align: center;">
-  <video width="100%" controls style="max-width: 800px; border-radius: 10px; border: 1px solid #ddd;">
+<div style="text-align: center; border-radius: 10px; border: 2px solid #ffcc00; box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3); overflow: hidden; max-width: 800px; margin: 20px auto;">
+  <video width="100%" controls>
     <source src="./images/intro_amiens.mp4" type="video/mp4">
     Votre navigateur ne supporte pas la lecture de cette vidéo.
   </video>
@@ -46,8 +61,9 @@ Découvrez notre machine en action à travers cette courte vidéo :
 
 ---
 
-### 🛠️ Navigation rapide
-Utilisez le menu sur la gauche pour explorer les différentes étapes de notre fabrication :
-- **Objectifs** : Pourquoi ce projet ?
-- **Études** : Nos choix techniques.
-- **Conception** : Plans et prototypage.
+### 🛠️ NAVIGATION RAPIDE
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <a href="./etudes.md" style="background-color: #007bff; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">⚙️ Choix Techniques</a>
+  <a href="./conception.md" style="background-color: #007bff; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">✒️ CAO & Plans</a>
+  <a href="./etapes.md" style="background-color: #007bff; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">🏗️ Journal de Bord</a>
+</div>
