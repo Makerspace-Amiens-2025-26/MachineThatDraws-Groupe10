@@ -77,7 +77,7 @@ nav_order: 1
 *Manipulez le modèle ci-dessous pour découvrir la structure interne de la machine.*
 
 <div style="border: 2px solid #30363d; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 0 25px rgba(0, 212, 255, 0.15);">
-  <iframe height="600" width="100%" src="https://modelembedder.net/embed?did=f36f8aaf3489bbdbfa2a3f64&wvm=v&wvmid=4daecf5db9d4894318d9cbdc&eid=03979e1b762d255a4018c414&elementType=ASSEMBLY" frameborder="0"></iframe>
+  <iframe height="600" width="100%" src="https://modelembedder.net/embed?did=8b8c43a593a6e22dfd5bf280&wvm=v&wvmid=a17a5659704397e41d2346cb&eid=a178174cd77496a5cd270f55&elementType=ASSEMBLY" frameborder="0"></iframe>
 </div>
 
 ---
