@@ -4517,6 +4517,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 106.68) (xy 129.54 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d504743-2c36-432a-9009-26e3669e6f7b")
+	)
+	(wire
+		(pts
 			(xy 135.89 111.76) (xy 134.62 111.76)
 		)
 		(stroke
@@ -5604,7 +5614,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B3B-PH-K_1x04_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical"
 			(at 149.86 132.08 0)
 			(effects
 				(font
@@ -5678,7 +5688,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:Jumper_Harwin_S1621_P10.9mm"
 			(at 177.8 146.05 0)
 			(effects
 				(font
@@ -5722,7 +5732,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 129.54 114.3 0)
+		(at 129.54 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5731,7 +5741,7 @@
 		(fields_autoplaced yes)
 		(uuid "0f09a638-3167-414c-858d-fe62ccd86324")
 		(property "Reference" "#PWR017"
-			(at 129.54 118.11 0)
+			(at 129.54 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5740,7 +5750,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 129.54 109.22 0)
+			(at 129.54 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5748,7 +5758,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 114.3 0)
+			(at 129.54 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5757,7 +5767,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 114.3 0)
+			(at 129.54 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5766,7 +5776,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 129.54 114.3 0)
+			(at 129.54 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6531,7 +6541,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "makerspace-unilasalle:C_1206"
 			(at 186.69 82.55 0)
 			(effects
 				(font
@@ -6731,7 +6741,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_Ningbo-Kagnex:TerminalBlock_Ningbo-Kagnex_HB9500M_1x02_P9.5mm"
 			(at 172.72 72.39 0)
 			(effects
 				(font
@@ -6798,7 +6808,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B3B-PH-K_1x04_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical"
 			(at 213.36 133.35 0)
 			(effects
 				(font
@@ -6874,7 +6884,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "makerspace-unilasalle:C_1206"
 			(at 205.74 82.55 0)
 			(effects
 				(font
@@ -7212,7 +7222,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_EH_B4B-EH-A_1x03_P2.50mm_Vertical"
 			(at 162.56 50.8 0)
 			(effects
 				(font
@@ -7374,7 +7384,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:Jumper_Harwin_S1621_P10.9mm"
 			(at 113.03 142.24 0)
 			(effects
 				(font
@@ -7575,7 +7585,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:CP_Elec_3x5.3"
 			(at 203.2 113.03 0)
 			(effects
 				(font
@@ -7619,7 +7629,7 @@
 	)
 	(symbol
 		(lib_id "makerspace-unilasalle:R")
-		(at 214.63 77.47 90)
+		(at 214.63 77.47 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7643,7 +7653,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "makerspace-unilasalle:R_Axial"
 			(at 214.63 77.47 0)
 			(effects
 				(font
@@ -7779,7 +7789,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "makerspace-unilasalle:C_1206"
 			(at 146.05 55.88 0)
 			(effects
 				(font
@@ -8501,7 +8511,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bcf189f9-1cf3-43ab-8a98-2962f62ae377")
-		(property "Reference" "Display"
+		(property "Reference" "Display1"
 			(at 86.36 114.2999 0)
 			(effects
 				(font
@@ -8519,7 +8529,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B3B-PH-K_1x04_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical"
 			(at 83.82 114.3 0)
 			(effects
 				(font
@@ -8561,7 +8571,7 @@
 		(instances
 			(project ""
 				(path "/d1309c4d-f5c5-4ae1-9a0a-1ebc6300afdd"
-					(reference "Display")
+					(reference "Display1")
 					(unit 1)
 				)
 			)
@@ -8731,7 +8741,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "makerspace-unilasalle:R_Axial"
 			(at 77.47 106.68 0)
 			(effects
 				(font
@@ -8798,7 +8808,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:Jumper_Harwin_S1621_P10.9mm"
 			(at 177.8 140.97 0)
 			(effects
 				(font
@@ -8866,7 +8876,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal"
 			(at 157.48 81.026 0)
 			(effects
 				(font
@@ -9224,7 +9234,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:Jumper_Harwin_S1621_P10.9mm"
 			(at 113.03 144.78 0)
 			(effects
 				(font
@@ -9359,7 +9369,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "makerspace-unilasalle:R_Axial"
 			(at 71.12 106.68 0)
 			(effects
 				(font
@@ -9495,7 +9505,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:CP_Elec_3x5.3"
 			(at 138.43 111.76 0)
 			(effects
 				(font
@@ -9563,7 +9573,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:Jumper_Harwin_S1621_P10.9mm"
 			(at 177.8 143.51 0)
 			(effects
 				(font
@@ -9698,7 +9708,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
 			(at 217.17 82.55 90)
 			(effects
 				(font
@@ -9952,7 +9962,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:Jumper_Harwin_S1621_P10.9mm"
 			(at 113.03 139.7 0)
 			(effects
 				(font
@@ -10020,7 +10030,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0402_1005Metric"
 			(at 182.88 77.47 0)
 			(effects
 				(font
