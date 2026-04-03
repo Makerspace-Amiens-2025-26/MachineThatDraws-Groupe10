@@ -52,11 +52,16 @@ nav_order: 1
     color: var(--text-white) !important;
   }
 
-  /* Séparateurs custom — remplace les --- qui génèrent des <hr> blancs */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border-color);
-    margin: 32px 0;
+  /* Écrase TOUS les styles hr de Just the Docs */
+  hr,
+  .divider,
+  .main-content hr {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-top: 1px solid #30363d !important;
+    height: 1px !important;
+    margin: 32px 0 !important;
   }
 </style>
 
