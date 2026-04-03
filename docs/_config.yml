@@ -1,3 +1,5 @@
-theme: jekyll-theme-odyssey
+remote_theme: SirusCodes/Odyssey
 title: Machine That Draws - Groupe 10
 description: Système de traçage automatisé · Génération 2026
+plugins:
+  - jekyll-remote-theme
