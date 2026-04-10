@@ -87,7 +87,7 @@ nav_order: 1
   <h1 style="font-size: 2.5em; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;">
     Machine That Draws <span style="color: white;">- Groupe 10</span>
   </h1>
-  <p style="color: var(--accent-blue); font-family: monospace;">> SYSTÈME DE TRAÇAGE AUTOMATISÉ GÉNÉRATION 2026</p>
+  <p style="color: var(--accent-blue); font-family: monospace;">> Le projet "Machine that draws" coniste en la création d'une machine qui va dessier de manière automatisé avec du matériel fournie de base et de nos compétences !</p>
 
   <div style="margin-top: 20px;">
     <a href="https://cad.onshape.com/documents/8b8c43a593a6e22dfd5bf280/w/f337884a351008c809d7df22/e/a178174cd77496a5cd270f55?renderMode=0&uiState=69d8e3a393e9b9c5b111a1c9" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2">Notre projet sur Onshape</a>
@@ -106,7 +106,7 @@ nav_order: 1
 
 <hr class="divider">
 
-## 👥 Notre équipe
+## 👥 Notre équipe (le groupe 10)
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
   <div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
