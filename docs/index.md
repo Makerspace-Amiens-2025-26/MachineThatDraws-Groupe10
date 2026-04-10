@@ -47,9 +47,17 @@ nav_order: 1
     color: white !important;
   }
 
+  /* MODIFICATION DU BOUTON REPO GITHUB */
   .btn-repo {
-    border: 1px solid var(--text-white) !important;
-    color: var(--text-white) !important;
+    border: 1px solid var(--neon-blue) !important;
+    color: var(--neon-blue) !important;
+    transition: all 0.3s ease;
+  }
+
+  .btn-repo:hover {
+    background-color: rgba(0, 212, 255, 0.1) !important;
+    box-shadow: 0 0 12px var(--neon-blue);
+    transform: translateY(-2px);
   }
 
   /* Écrase TOUS les styles hr de Just the Docs */
@@ -103,13 +111,11 @@ nav_order: 1
     <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Célian DAIX</h3>
     <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Interface & Algorithmes</p>
   </div>
-</div>
-<div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+  <div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
     <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Mathis FRANCOIS</h3>
     <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Interface & Algorithmes</p>
   </div>
-</div>
-<div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+  <div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
     <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Alexandre BOUREL</h3>
     <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Interface & Algorithmes</p>
   </div>
