@@ -12,6 +12,8 @@ nav_order: 1
     --neon-blue: #00d4ff;
     --text-white: #e6edf3;
     --border-color: #30363d;
+    /* Définition de la couleur du bouton Onshape pour réutilisation */
+    --btn-primary-bg: #5d3fd3;
   }
 
   body,
@@ -41,23 +43,31 @@ nav_order: 1
     text-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
   }
 
+  /* Style pour le bouton Onshape (et maintenant GitHub) */
   .btn-primary {
-    background-color: #5d3fd3 !important;
-    border-color: #5d3fd3 !important;
+    background-color: var(--btn-primary-bg) !important;
+    border-color: var(--btn-primary-bg) !important;
     color: white !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #4c32ab !important; /* Un peu plus sombre au survol */
+    border-color: #4c32ab !important;
   }
 
-  /* MODIFICATION DU BOUTON REPO GITHUB */
+  /* MODIFICATION DU BOUTON REPO GITHUB POUR ÉGALER ONSHAPE */
   .btn-repo {
-    border: 1px solid var(--neon-blue) !important;
-    color: var(--neon-blue) !important;
-    transition: all 0.3s ease;
+    /* On applique les mêmes couleurs que .btn-primary */
+    background-color: var(--btn-primary-bg) !important;
+    border-color: var(--btn-primary-bg) !important;
+    color: white !important;
+    transition: background-color 0.3s ease;
   }
 
   .btn-repo:hover {
-    background-color: rgba(0, 212, 255, 0.1) !important;
-    box-shadow: 0 0 12px var(--neon-blue);
-    transform: translateY(-2px);
+    background-color: #4c32ab !important; /* Même effet de survol */
+    border-color: #4c32ab !important;
   }
 
   /* Écrase TOUS les styles hr de Just the Docs */
