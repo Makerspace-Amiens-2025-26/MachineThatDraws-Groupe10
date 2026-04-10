@@ -72,7 +72,7 @@ nav_order: 1
   <p style="color: var(--accent-blue); font-family: monospace;">> SYSTÈME DE TRAÇAGE AUTOMATISÉ GÉNÉRATION 2026</p>
 
   <div style="margin-top: 20px;">
-    <a href="URL_DE_TON_ONSHAPE" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2">Notre projet sur Onshape</a>
+    <a href="https://cad.onshape.com/documents/8b8c43a593a6e22dfd5bf280/w/f337884a351008c809d7df22/e/a178174cd77496a5cd270f55?renderMode=0&uiState=69d8e3a393e9b9c5b111a1c9" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2">Notre projet sur Onshape</a>
     <a href="https://github.com/Makerspace-Amiens-2025-26/MachineThatDraws-Groupe10" class="btn btn-repo fs-5 mb-4 mb-md-0">Notre repo GitHub</a>
   </div>
 </div>
