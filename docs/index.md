@@ -83,24 +83,34 @@ nav_order: 1
 *Manipulez le modèle ci-dessous pour découvrir la structure interne de la machine.*
 
 <div style="border: 2px solid #30363d; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 0 25px rgba(0, 212, 255, 0.15);">
-  <iframe height="600" width="100%" src="https://modelembedder.net/embed?did=8b8c43a593a6e22dfd5bf280&wvm=v&wvmid=a17a5659704397e41d2346cb&eid=a178174cd77496a5cd270f55&elementType=ASSEMBLY" frameborder="0"></iframe>
+  <iframe height="600" width="100%" src="https://modelembedder.net/embed?did=8b8c43a593a6e22dfd5bf280&wvm=v&wvmid=01f7cd1fe38b59d1cf645123&eid=a178174cd77496a5cd270f55&elementType=ASSEMBLY" frameborder="0"></iframe>
 </div>
 
 <hr class="divider">
 
-## 👥 L'UNITÉ DE DÉVELOPPEMENT
+## 👥 Notre équipe
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
   <div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">MEMBRE 1</h3>
+    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Louis BOURBON</h3>
     <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Mécanique & CAO</p>
   </div>
   <div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">MEMBRE 2</h3>
+    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Soren Crëpin</h3>
     <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Électronique & Firmware</p>
   </div>
   <div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">MEMBRE 3</h3>
+    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Célian DAIX</h3>
+    <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Interface & Algorithmes</p>
+  </div>
+</div>
+<div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Mathis FRANCOIS</h3>
+    <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Interface & Algorithmes</p>
+  </div>
+</div>
+<div style="padding: 20px; background: #161b22; border-radius: 10px; border-top: 3px solid var(--neon-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    <h3 style="margin: 0; font-size: 1.1em; border:none !important;">Alexandre BOUREL</h3>
     <p style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Spécialité : Interface & Algorithmes</p>
   </div>
 </div>
