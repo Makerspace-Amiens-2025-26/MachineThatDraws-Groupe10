@@ -1,0 +1,99 @@
+/* VARIABLES DE COULEURS */
+:root {
+    --primary: #007bff;
+    --accent: #00d2ff;
+    --dark: #1a1a1a;
+    --light: #f8f9fa;
+    --white: #ffffff;
+}
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    color: var(--dark); 
+    line-height: 1.6; 
+    scroll-behavior: smooth; 
+    background-color: #fcfcfc;
+}
+
+/* NAVIGATION */
+.navbar { 
+    backdrop-filter: blur(10px); 
+    background: rgba(255,255,255,0.8) !important; 
+}
+
+/* HEADER / HERO */
+.hero-gradient {
+    background: linear-gradient(135deg, #1a1a1a 0%, #004e92 100%);
+    color: var(--white); 
+    padding: 140px 0 100px;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+/* CARTES MODERNES */
+.modern-card {
+    border: none; 
+    border-radius: 20px;
+    background: var(--white); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease; 
+    height: 100%;
+}
+.modern-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+}
+
+/* TIMELINE */
+.timeline-item {
+    padding-left: 30px; 
+    border-left: 3px solid var(--accent);
+    margin-bottom: 30px; 
+    position: relative;
+}
+.timeline-item::before {
+    content: ''; 
+    width: 15px; 
+    height: 15px; 
+    background: var(--primary);
+    border-radius: 50%; 
+    position: absolute; 
+    left: -9px; 
+    top: 5px;
+}
+
+/* TITRES */
+.section-title { 
+    font-weight: 800; 
+    margin-bottom: 50px; 
+    text-align: center; 
+}
+.section-title span { 
+    color: var(--primary); 
+}
+
+/* BOUTONS */
+.btn-gradient {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    border: none; 
+    color: var(--white); 
+    font-weight: 600; 
+    border-radius: 50px;
+    padding: 12px 30px; 
+    transition: 0.3s;
+}
+.btn-gradient:hover { 
+    opacity: 0.9; 
+    transform: scale(1.05); 
+    color: var(--white); 
+}
+
+/* SECTIONS SPÉCIFIQUES */
+.pcb-section {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    border-radius: 2rem !important;
+}
+
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+}
