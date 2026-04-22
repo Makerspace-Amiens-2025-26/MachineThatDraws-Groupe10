@@ -7336,7 +7336,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Card:microSD_HC_Molex_47219-2001"
+		(property "Footprint" "makerspace-unilasalle:SD_Hirose_DM1AA_SF_PEJ82"
 			(at 212.09 41.91 0)
 			(effects
 				(font
