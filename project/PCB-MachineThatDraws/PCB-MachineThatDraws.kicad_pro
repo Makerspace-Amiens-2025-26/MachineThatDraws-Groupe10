@@ -659,16 +659,16 @@
       {
         "filename": "PCB-MachineThatDraws.kicad_sch",
         "name": "PCB-MachineThatDraws",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "d1309c4d-f5c5-4ae1-9a0a-1ebc6300afdd"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR24",
     "variants": []
   },
   "sheets": [
     [
       "d1309c4d-f5c5-4ae1-9a0a-1ebc6300afdd",
-      "Root"
+      "PCB-MachineThatDraws"
     ]
   ],
   "text_variables": {},
