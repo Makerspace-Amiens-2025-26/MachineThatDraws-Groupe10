@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Développement | G10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top: 80px;">
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GROUPE 10</a>
+            <div class="ms-auto">
+                <a href="index.html#dev" class="btn btn-acnh btn-acnh-secondary rounded-pill btn-sm">
+                    <i class="ph-bold ph-arrow-left me-2"></i>Retour au site
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-6" data-aos="fade-down">
+            <h1 class="display-3 fw-bold" style="color: #8a2be2;">Filière Logicielle & Algorithmes</h1>
+            <p class="lead opacity-75">Le parcours complet de la conversion vectorielle jusqu'aux signaux moteurs de la machine.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="zoom-in">
+                <div class="acnh-bubble p-5 h-100 shadow-sm purple-theme text-dark">
+                    <h3 class="acnh-header mb-4"><i class="ph-duotone ph-terminal-window me-2"></i>Structure et syntaxe G-Code</h3>
+                    <p>Le G-code est l'ossature logique de notre traceur. Chaque commande envoyée correspond à des coordonnées cartésiennes précises interprétées en temps réel.</p>
+                    <div class="bg-dark text-success p-3 rounded-3 font-monospace small mb-3">
+                        G21 ; Configuration des dimensions en mm<br>
+                        G90 ; Positionnement absolu<br>
+                        G0 X10.0 Y25.0 ; Déplacement rapide sans dessiner<br>
+                        G1 X50.0 Y25.0 F1200 ; Trait rectiligne à vitesse constante
+                    </div>
+                    <p class="mb-0">Ce langage universel fait la passerelle entre l'image virtuelle et le cadençage précis des moteurs physiques.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="acnh-bubble p-5 h-100 shadow-sm teal-theme text-dark">
+                    <h3 class="acnh-header mb-4"><i class="ph-duotone ph-vector me-2"></i>Post-Traitement Vectoriel via Inkscape</h3>
+                    <p>Pour assurer la fluidité mécanique, l'image vectorielle doit être minutieusement nettoyée de ses nœuds parasites :</p>
+                    <ul class="mb-3">
+                        <li>Vérification manuelle des tracés fermés et chemins d'exécution.</li>
+                        <li>Utilisation de l'extension <em>G-code Tools</em> pour le calcul précis des trajectoires d'outils.</li>
+                        <li>Génération de fichiers optimisés en interpolations linéaires.</li>
+                    </ul>
+                    <p class="mb-0">Les paramètres critiques comme la vitesse de translation et la gestion des micro-pauses y sont entièrement configurés.</p>
+                </div>
+            </div>
+
+            <div class="col-12" data-aos="fade-up">
+                <div class="acnh-bubble p-5 shadow-sm amber-theme text-dark">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <h3 class="acnh-header mb-4"><i class="ph-duotone ph-broadcast me-2"></i>Flux de données avec Universal Gcode Sender</h3>
+                            <p>UGS (Universal Gcode Sender) joue le rôle d'interface de commande en temps réel entre l'ordinateur et le microcontrôleur. Il s'assure d'encapsuler et de pousser chaque bloc de texte sérialisé sans perte de paquets.</p>
+                            <p class="mb-0">Il permet également un contrôle visuel direct sur les coordonnées de travail (Work Coordinate System), assurant un retour constant sur la position physique de l'outil et permettant l'interruption sécurisée du processus en cas d'anomalie.</p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img src="images/gcode.png" class="img-fluid rounded-4 shadow-sm border-acnh" alt="Flux UGS" style="max-height: 200px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>

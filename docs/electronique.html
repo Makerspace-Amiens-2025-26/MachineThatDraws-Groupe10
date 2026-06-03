@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Électronique | G10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top: 80px;">
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GROUPE 10</a>
+            <div class="ms-auto">
+                <a href="index.html#electronique" class="btn btn-acnh btn-acnh-primary rounded-pill btn-sm">
+                    <i class="ph-bold ph-arrow-left me-2"></i>Retour au site
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-6" data-aos="fade-down">
+            <h1 class="display-3 fw-bold" style="color: var(--blue-main);">Architecture Électronique</h1>
+            <p class="lead opacity-75">Étude détaillée des composants, de la logique et du routage du PCB.</p>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm blue-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-cpu me-2"></i>Le Cerveau et le Contrôle</h2>
+            <p class="text-center mb-5">Une architecture mécatronique typique séparant strictement la puissance de la logique.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/esp32.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="ESP32-S3" onerror="this.src='https://placehold.co/600x400/eee/999?text=Microcontrôleur+ESP32'">
+                        <h4 class="fw-bold mb-3"><i class="ph-fill ph-microchip me-2 text-primary"></i>Le Microcontrôleur ESP32-S3</h4>
+                        <p>Ce circuit a pour objectif de piloter un système motorisé complet (gestion de la puissance, contrôle des actionneurs, interface utilisateur).</p>
+                        <p class="mb-0">Au cœur de notre conception, nous avons choisi d'utiliser un <strong>ESP32-S3 au format UNO</strong>. Ce choix est stratégique : il nous offre une grande puissance de calcul, de nombreuses broches (GPIO), et ouvre la porte à une connectivité sans fil très utile pour l'évolution du projet. Sa carte possède son propre petit régulateur interne qui a besoin de 5V en entrée pour générer le 3.3V.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/a4988.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Drivers A4988" onerror="this.src='https://placehold.co/600x400/eee/999?text=Drivers+Moteurs+A4988'">
+                        <h4 class="fw-bold mb-3"><i class="ph-fill ph-car-profile me-2 text-primary"></i>Les Drivers de Moteurs (A4988)</h4>
+                        <p>Pour la partie opérative, le schéma met en évidence le contrôle des deux moteurs pas-à-pas de la machine via deux modules drivers A4988.</p>
+                        <p class="mb-0">Ces drivers nous permettent un contrôle ultra-précis de la position. Des cavaliers (jumpers) sont prévus sur le circuit pour configurer la résolution des pas (le microstepping). Un connecteur (J8) est également prévu pour piloter le servomoteur de l'axe Z qui fonctionne en 5V.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm amber-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-lightning me-2"></i>Gestion de la Puissance et Sécurité (12V)</h2>
+            <p class="text-center mb-5">Distribution de l'énergie brute et protection matérielle.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/barrel_jack.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Barrel Jack 12V" onerror="this.src='https://placehold.co/600x400/eee/999?text=Connecteur+12V'">
+                        <h4 class="fw-bold mb-3"><i class="ph-fill ph-plug me-2 text-warning"></i>L'Alimentation Principale (12V)</h4>
+                        <p>Notre système est alimenté en 12 volts via un connecteur de type "Barrel Jack". Cette tension brute est <strong>exclusivement réservée à la puissance pure</strong> et envoyée directement aux broches VMOT (Voltage Motor) des drivers A4988.</p>
+                        <p class="mb-0"><strong>Pourquoi 12V ?</strong> Les moteurs pas-à-pas ont besoin d'une tension (et d'un courant) élevée pour générer un couple important (la force mécanique) et tourner rapidement. Si on les alimentait avec une tension plus basse, ils manqueraient cruellement de puissance.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/fusible.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Fusible" onerror="this.src='https://placehold.co/600x400/eee/999?text=Fusible+Sacrificiel'">
+                        <h4 class="fw-bold mb-3"><i class="ph-fill ph-shield-warning me-2 text-warning"></i>Le Fusible Sacrificiel (F1)</h4>
+                        <p>Situé juste après l'entrée 12V (suivi d'un connecteur d'arrêt d'urgence), ce fusible est un composant de sécurité "sacrificiel" : son but est de "mourir" pour sauver la carte. Il a 3 utilités principales :</p>
+                        <ul class="mb-0">
+                            <li><strong>Courts-circuits :</strong> Si un défaut majeur survient, le courant devient gigantesque. Le filament du fusible chauffe par effet Joule et fond instantanément pour couper le circuit.</li>
+                            <li><strong>Protection financière :</strong> Si un moteur se bloque (calage), il consomme son courant maximum. Sans fusible, cette surintensité ferait brûler les drivers A4988 ou détruirait l'alimentation.</li>
+                            <li><strong>Protection du PCB :</strong> Si un courant de 10 Ampères traverse la carte à cause d'un défaut, les pistes en cuivre agiraient comme des résistances chauffantes, décolleraient de la carte et brûleraient le circuit imprimé.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm teal-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-waveform me-2"></i>Conversion et Filtrage (5V)</h2>
+            <p class="text-center mb-5">Le 12V étant destructeur pour l'électronique standard, il faut l'abaisser intelligemment.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/regulateur.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Régulateur à découpage" onerror="this.src='https://placehold.co/600x400/eee/999?text=Régulateur+à+Découpage'">
+                        <h4 class="fw-bold mb-3"><i class="ph-fill ph-battery-charging me-2 text-info"></i>Le Régulateur à Découpage (U2)</h4>
+                        <p>Le modèle utilisé est un convertisseur abaisseur (Buck converter) R-78E5.0-1.0. Son but est de transformer le 12V en un 5V stable pour alimenter le Servomoteur et l'ESP32.</p>
+                        <p class="mb-0"><strong>Le principe du hachage :</strong> Contrairement aux anciens régulateurs linéaires (comme le LM7805) qui dissipent l'excès de tension en chaleur, le U2 intègre un transistor qui s'ouvre et se ferme des centaines de milliers de fois par seconde pour "hacher" le 12V. Une bobine et un condensateur internes lissent ensuite cette tension. <strong>L'avantage :</strong> il convertit l'énergie avec plus de 90% d'efficacité. Puisqu'il ne dissipe presque pas d'énergie, il ne chauffe pas et n'a pas besoin de gros dissipateur thermique !</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/condensateurs.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Condensateurs" onerror="this.src='https://placehold.co/600x400/eee/999?text=Condensateurs+de+Filtrage'">
+                        <h4 class="fw-bold mb-3"><i class="ph-fill ph-waves me-2 text-info"></i>Les Condensateurs de Filtrage (C5 et C6)</h4>
+                        <p>Le régulateur est encadré par deux condensateurs externes de 10µF cruciaux pour la stabilité :</p>
+                        <p><strong>C5 (Condensateur d'entrée) :</strong> Il agit comme un petit réservoir tampon sur la ligne 12V. Lorsque le régulateur "hache" le courant, il crée des micro-appels d'énergie. Ce condensateur fournit cette énergie instantanément, évitant de perturber le reste de la ligne 12V.</p>
+                        <p class="mb-0"><strong>C6 (Condensateur de sortie) :</strong> Il parfait le travail du régulateur. Il filtre les toutes dernières micro-variations (le "bruit" résiduel du hachage) pour garantir que l'ESP32 reçoive un 5V d'une propreté absolue, condition indispensable pour que le microcontrôleur ne plante pas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm purple-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-plugs me-2"></i>La Logique 3.3V et les Protocoles de Communication</h2>
+            <p class="text-center mb-5">Distribution de la tension du "cerveau" et adaptation d'impédance via les résistances de Pull-Up.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-12">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border-acnh d-flex flex-column flex-md-row gap-4 align-items-center">
+                        <div class="flex-grow-1">
+                            <h4 class="fw-bold mb-3"><i class="ph-fill ph-cpu me-2" style="color: #6f42c1;"></i>La Tension Logique (3.3V)</h4>
+                            <p>L'ESP32-S3 fonctionne avec des signaux logiques de 3.3V (0V = état bas, 3.3V = état haut). Cette tension est générée par la carte ESP32 elle-même (broche 3V3) et distribuée à toute l'électronique de contrôle.</p>
+                            <p class="mb-0">Elle alimente le lecteur de carte SD (VDD), l'affichage I2C, la tension de référence des drivers A4988 (broches VDD) et les résistances de pull-up pour les capteurs de fin de course. <strong>Attention :</strong> Envoyer du 5V ou du 12V sur les broches de données de l'ESP32 ou de la carte SD les grillerait instantanément.</p>
+                        </div>
+                        <img src="images/logique_3v3.jpg" class="img-fluid rounded-4 shadow-sm border-acnh" alt="Tension 3.3V" style="max-width: 300px; height: 250px; object-fit: cover;" onerror="this.src='https://placehold.co/300x250/eee/999?text=Logique+3.3V'">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/bus_i2c.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Bus I2C" onerror="this.src='https://placehold.co/600x400/eee/999?text=Pull-up+I2C+(4.7kΩ)'">
+                        <h4 class="fw-bold mb-3" style="color: #6f42c1;"><i class="ph-fill ph-monitor me-2"></i>Le bus I2C (Écran) : 4.7 kΩ</h4>
+                        <p>Les résistances R4 et R5 sont placées sur les lignes SDA et SCL de l'écran. L'I2C utilise un fonctionnement en "Drain ouvert" : les composants ne forcent jamais la ligne à 3.3V, ils la tirent à 0V pour "parler". Ce sont R4 et R5 qui ramènent la tension à 3.3V.</p>
+                        <p class="mb-0"><strong>Pourquoi 4.7 kΩ ?</strong> Les pistes agissent comme de minuscules condensateurs (capacité parasite). Une résistance trop forte (ex: 100kΩ) mettrait trop de temps à remonter la tension, arrondissant le signal et rendant la vitesse floue. Trop faible (ex: 1kΩ), les puces surconsommeraient pour la tirer à 0V. 4.7 kΩ est le compromis idéal pour des signaux bien carrés à 100/400 kHz.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/bus_spi.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Bus SPI" onerror="this.src='https://placehold.co/600x400/eee/999?text=Pull-up+SPI+(10kΩ)'">
+                        <h4 class="fw-bold mb-3" style="color: #6f42c1;"><i class="ph-fill ph-sd-card me-2"></i>Le bus SPI (Carte SD) : 10 kΩ</h4>
+                        <p>La carte embarque un lecteur SD communiquant en SPI pour faire du datalogging. Le SPI "pousse" activement le courant. Les résistances R6 et R7 ne servent qu'à fixer un état par défaut (tirage faible / weak pull-up) pour que la ligne ne flotte pas et ne capte pas de parasites, tout en économisant l'énergie.</p>
+                        <ul class="mb-0">
+                            <li><strong>R7 (Chip Select) :</strong> Maintient la broche à HIGH au démarrage pour empêcher la carte SD de s'activer de manière intempestive et d'interpréter des bruits.</li>
+                            <li><strong>R6 (MISO) :</strong> Force un état HIGH propre lorsque la carte SD est inactive (haute impédance) pour que l'ESP32 ne lise pas de valeurs parasites.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm green-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-circuit-board me-2"></i>Le Routage du Circuit Imprimé (PCB)</h2>
+            <p class="text-center mb-5">Le passage du schéma au monde physique avec KiCad.</p>
+
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border-acnh">
+                        <p>La carte a été conçue sur deux couches : pistes rouges pour la couche supérieure (Top) et bleues pour la couche inférieure (Bottom). Lors du routage, plusieurs règles de l'art ont été respectées :</p>
+                        <ul>
+                            <li class="mb-3"><strong>Gestion des courants forts :</strong> Les pistes véhiculant le 12V et la masse générale, notamment vers les drivers A4988, sont significativement plus larges. Cela permet d'encaisser les pics de courant des moteurs sans échauffement.</li>
+                            <li class="mb-3"><strong>Découplage :</strong> Des condensateurs de 100µF ont été placés au plus près des drivers moteurs pour lisser la tension et absorber les appels de courant, protégeant ainsi l'électronique logique.</li>
+                            <li class="mb-0"><strong>Organisation spatiale :</strong> L'agencement sépare la zone de "puissance" (à gauche avec le jack, le fusible et le régulateur) de la zone de contrôle et d'interface (à droite avec le lecteur SD et l'ESP32).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <img src="images/pcb.png" class="img-fluid rounded-4 shadow border-acnh w-100" alt="Routage PCB double couche" onerror="this.src='https://placehold.co/500x500/eee/999?text=Routage+PCB'">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>

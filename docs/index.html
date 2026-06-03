@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G10 | Machine That Draws</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">GROUPE 10</a>
+            <div class="ms-auto d-none d-lg-flex gap-4">
+                <a href="#projet" class="nav-link">Projet</a>
+                <a href="#equipe" class="nav-link">L'Équipe</a>
+                <a href="#dev" class="nav-link">Développement</a>
+                <a href="#conception" class="nav-link">Conception</a>
+                <a href="#electronique" class="nav-link">Électronique</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center text-white">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-1 fw-bold acnh-title-shadow">MACHINE THAT DRAWS</h1>
+            <p class="lead acnh-subtitle mb-5">Projet de I2 - Groupe 10</p>
+            
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-4">
+                <a href="https://cad.onshape.com/documents/8b8c43a593a6e22dfd5bf280/w/f337884a351008c809d7df22/e/a178174cd77496a5cd270f55" class="btn btn-acnh btn-acnh-primary rounded-pill shadow">
+                    <i class="ph-bold ph-cube me-2"></i>Onshape
+                </a>
+                <a href="https://github.com/Makerspace-Amiens-2025-26/MachineThatDraws-Groupe10" class="btn btn-acnh btn-acnh-secondary rounded-pill shadow">
+                    <i class="ph-bold ph-github-logo me-2"></i>GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projet" class="container py-7">
+        <div class="row g-5 align-items-stretch">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="acnh-bubble p-5 h-100 shadow-sm amber-theme">
+                    <h2 class="acnh-header mb-4"><i class="ph-duotone ph-presentation-chart me-2"></i>Le Projet</h2>
+                    
+                    <p>Le projet "Machine That Draws" s'inscrit dans le cadre de notre formation. L'objectif global était de concevoir de A à Z une machine capable de dessiner de manière automatisée.</p>
+                    
+                    <p>Dès le départ, nous voulions créer quelque chose d'unique, un design de machine qui nous convient et qui nous différencie. Nous sommes donc partis sur l'idée d'un <strong>"pen plotter"</strong> (traceur à stylo). Cette machine fonctionne sur le même principe qu'une imprimante, c'est-à-dire que la feuille bouge avec des barres qui vont la faire coulisser, ainsi la feuille avance.</p>
+                    
+                    <p>Ce projet a donc été un véritable challenge mêlant mécanique, programmation et électronique, nous avons décidé de nous répartir les tâches stratégiquement en fonction des affinités de chacun.</p>
+
+                    <div class="border-acnh p-3 mt-4 rounded-4 bg-white-50">
+                        <h5 class="fw-bold"><i class="ph-bold ph-info me-2"></i>En bref :</h5>
+                        <ul class="list-unstyled m-0">
+                            <li><strong>Précision :</strong> Moteurs pas-à-pas Nema 17</li>
+                            <li><strong>Cerveau :</strong> Arduino Nano + Shield CNC (puis ESP32)</li>
+                            <li><strong>Logiciels :</strong> Inkscape & UGS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="acnh-bubble p-2 h-100 shadow-lg bg-white">
+                    <iframe src="https://modelembedder.net/embed?did=8b8c43a593a6e22dfd5bf280&wvm=v&wvmid=01f7cd1fe38b59d1cf645123&eid=a178174cd77496a5cd270f55&elementType=ASSEMBLY" 
+                            width="100%" height="100%" style="min-height: 400px; border-radius: 30px;" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipe" class="container py-7">
+        <h2 class="acnh-header text-center mb-6">L'Équipe du Projet</h2>
+        <div class="row g-4 justify-content-center text-center">
+            <div class="col-md-4 col-lg" data-aos="zoom-in">
+                <div class="acnh-bubble p-4 h-100 blue-theme team-card">
+                    <div class="member-photo-circle mx-auto mb-3 shadow-sm">
+                        <img src="images/louis.jpg" alt="Louis">
+                    </div>
+                    <h5 class="fw-bold mb-1">Louis Bourbon</h5>
+                    <p class="small fw-bold opacity-75">Louis a été d'une grande aide pour la réalisation de la carte éléctronique et la modélisation de certaines pièces.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="100">
+                <div class="acnh-bubble p-4 h-100 green-theme team-card">
+                    <div class="member-photo-circle mx-auto mb-3 shadow-sm">
+                        <img src="images/mathis.jpg" alt="Mathis">
+                    </div>
+                    <h5 class="fw-bold mb-1">Mathis François</h5>
+                    <p class="small fw-bold opacity-75">Mathis a s'est vu comme le commandant du projet et à élaborer l'axe x et z en totalité, il a également participé à la partie éléctronique.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="200">
+                <div class="acnh-bubble p-4 h-100 purple-theme team-card">
+                    <div class="member-photo-circle mx-auto mb-3 shadow-sm">
+                        <img src="images/celian.jpg" alt="Célian">
+                    </div>
+                    <h5 class="fw-bold mb-1">Célian Daix</h5>
+                    <p class="small fw-bold opacity-75">Célian s'est démarqué dans la partie développement avec la création du site mais également dans le fait de faire fonctionner la machine. De plus il a aidé dans la partie éléctronique.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="300">
+                <div class="acnh-bubble p-4 h-100 teal-theme team-card">
+                    <div class="member-photo-circle mx-auto mb-3 shadow-sm">
+                        <img src="images/alexandre.jpg" alt="Alexandre">
+                    </div>
+                    <h5 class="fw-bold mb-1">Alexandre Bourel</h5>
+                    <p class="small fw-bold opacity-75">Alexandre a été l'homme de l'ombre qui a élaborer l'axe y en testant et en créant de nombreux prototypes.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="400">
+                <div class="acnh-bubble p-4 h-100 amber-theme team-card">
+                    <div class="member-photo-circle mx-auto mb-3 shadow-sm">
+                        <img src="images/soren.jpg" alt="Soren">
+                    </div>
+                    <h5 class="fw-bold mb-1">Soren Crëpin</h5>
+                    <p class="small fw-bold opacity-75">Soren à schematisé les différentes pièces et à contribuer à l'axe x avec Alexandre mais également sur des pièces importante de la machine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dev" class="massive-step purple-theme section-gap">
+        <div class="container pt-7">
+            <h2 class="display-3 fw-bold text-center text-white mb-0" data-aos="fade-down">DÉVELOPPEMENT</h2>
+        </div>
+
+        <div class="problematique-focus d-flex align-items-center">
+            <div class="container text-center" data-aos="zoom-in">
+                <span class="badge rounded-pill bg-white text-purple px-4 py-2 mb-4 fw-bold shadow-sm">LA QUESTION CENTRALE</span>
+                <h2 class="display-1 fw-bolder text-white mb-4">Comment réussir à dessiner <br>avec une machine ?</h2>
+                <div class="mx-auto" style="max-width: 600px;">
+                    <p class="fs-4 text-white-50">Transformer un pixel numérique en mouvement mécanique : voici le cœur de notre défi technique.</p>
+                </div>
+                <i class="ph-duotone ph-arrow-circle-down massive-icon-pulse mt-5"></i>
+            </div>
+        </div>
+
+        <div class="container pb-7">
+            <div class="row align-items-center mb-7 flex-row-reverse" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-5 shadow bg-white text-dark">
+                        <h3 class="acnh-header mb-3">Qu'est-ce que le G-Code ?</h3>
+                        <p>Le G-code est l’outil principal qui va nous permettre de faire fonctionner une machine à commande numérique (imprimante 3D, CNC, laser, etc.). C’est un langage universel utilisé par les machines, ce qui veut dire qu’il est compréhensible par la majorité d’entre elles.</p>
+                        <p>Concrètement, le G-code est composé de lignes d’instructions. Chaque ligne correspond à une action précise, le plus souvent un déplacement de la machine. Par exemple, une ligne peut dire à la machine d’aller à une position donnée selon des coordonnées (X, Y, Z), ou encore de régler une vitesse ou d’activer un outil.</p>
+                        <p>L’objectif va donc être de convertir une image, un dessin ou un modèle 3D en G-code. Pour ça, on utilise un logiciel qui transforme les coordonnées vectorielles du modèle en une suite d’instructions que la machine peut comprendre.</p>
+                        <p class="mb-0">Grâce à ça, la machine est capable de reproduire physiquement ce qu’on a conçu sur ordinateur, en suivant précisément chaque mouvement défini dans le G-code.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-2 shadow-lg bg-white">
+                        <img src="images/gcode.png" class="img-fluid rounded-4" alt="G-Code">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center mb-7" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-5 shadow bg-white text-dark">
+                        <h3 class="acnh-header mb-3">Comment générer le G-code ?</h3>
+                        <p>Pour générer le G-code, on va utiliser un logiciel comme Inkscape. L’objectif c’est de convertir un dessin (souvent en SVG) en trajectoires que la machine va pouvoir suivre.</p>
+                        <p>En effet, on commence par importer ou créer un dessin dans Inkscape. Si on part d’une image classique (png, jpg), il faut d’abord la transformer en tracé vectoriel pour avoir des lignes exploitables. Ensuite, on verifies que le dessin est propre, parce que la machine va suivre exactement les tracés.</p>
+                        <p>On va ensuite utiliser une extension comme G-code Tools, qui permet de transformer le dessin en G-code. On configure quelques paramètres comme la vitesse, les axes ou les dimensions de la machine.</p>
+                        <p class="mb-0">L’objectif va donc être de convertir le dessin en une suite d’instructions compréhensibles par la machine. Une fois le G-code généré, il suffit de l’envoyer à la machine pour qu’elle puisse exécuter les déplacements et reproduire le dessin.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-2 shadow-lg bg-white d-flex justify-content-center align-items-center">
+                        <img src="images/Inkscape_Logo.svg.png" class="img-fluid rounded-4 p-4" alt="Génération avec Inkscape" style="max-height: 300px;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center flex-row-reverse mb-5" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-5 shadow bg-white text-dark">
+                        <h3 class="acnh-header mb-3">Exploiter le G-code</h3>
+                        <p>Pour finir, on va maintenant chercher à exploiter ce G-code pour faire fonctionner la machine. Pour cela, on utilise une application comme Universal Gcode Sender.</p>
+                        <p>En effet, ce logiciel va nous permettre d’envoyer le fichier G-code directement à la machine et de contrôler son exécution. On peut se connecter à la machine, charger le fichier, et lancer les instructions.</p>
+                        <p>Chaque ligne du G-code va alors être lue et exécutée en temps réel, ce qui va permettre à la machine de se déplacer et de reproduire le dessin défini précédemment.</p>
+                        <p>On peut aussi surveiller le bon déroulement, ajuster certains paramètres et arrêter la machine si nécessaire.</p>
+                        <p class="mb-0">L’objectif ici est donc de faire le lien entre le fichier G-code généré et la machine réelle, afin de passer de la théorie à l’exécution.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-2 shadow-lg bg-white">
+                        <img src="images/ugs.png" class="img-fluid rounded-4" alt="UGS">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="zoom-in">
+                <a href="developpement.html" class="btn btn-acnh btn-acnh-secondary rounded-pill shadow px-5 py-3 fs-5">
+                    <i class="ph-bold ph-code me-2"></i>Ouvrir la Documentation Développement
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="conception" class="massive-step green-theme section-gap">
+        <div class="container pt-7">
+            <h2 class="display-3 fw-bold text-center text-white mb-0" data-aos="fade-down">CONCEPTION & FABRICATION</h2>
+        </div>
+
+        <div class="problematique-focus d-flex align-items-center" style="min-height: 50vh;">
+            <div class="container text-center" data-aos="zoom-in">
+                <h2 class="display-4 fw-bolder text-white mb-5">Conception des pièces</h2>
+                
+                <div class="mx-auto acnh-bubble p-5 shadow-lg bg-white text-dark text-start mb-5" style="max-width: 1000px;">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-7">
+                            <p class="fs-5 mb-3">Pour la conception des pièces, on a utilisé <strong>Onshape</strong>. L’objectif était de modéliser toute la machine avant de passer à la fabrication.</p>
+                            <p class="fs-5 mb-3">On a travaillé de manière itérative, c’est-à-dire qu’on a conçu, testé puis amélioré les pièces plusieurs fois, en faisant évoluer le design à travers différents prototypes plutôt que de partir directement sur une version finale. En parallèle, on a aussi choisi de décomposer la machine en plusieurs petites pièces plutôt qu’un seul bloc, ce qui permet de modifier plus facilement une partie sans tout refaire et d’optimiser chaque élément indépendamment.</p>
+                            <p class="fs-5 mb-0">Grâce à l’impression 3D, on a pu faire différents essais, ajuster les dimensions, corriger les jeux mécaniques et améliorer la solidité des pièces au fur et à mesure jusqu’à obtenir un résultat fonctionnel.</p>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <img src="images/machine.png" class="img-fluid rounded-4 shadow-sm" alt="Modélisation 3D">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pb-7">
+            <div class="text-center mt-5 mb-5" data-aos="zoom-in">
+                <h2 class="display-4 fw-bolder text-white">Fabrication des axes</h2>
+            </div>
+            
+            <div class="row g-5 align-items-stretch mt-3 mb-5">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="acnh-bubble p-4 h-100 shadow bg-white text-dark text-center d-flex flex-column">
+                        <div class="mb-3 mt-2">
+                            <i class="ph-duotone ph-arrows-left-right" style="font-size: 3rem; color: var(--green-main);"></i>
+                        </div>
+                        <h3 class="acnh-header mb-4">Axe X</h3>
+                        
+                        <div class="mb-4 d-flex justify-content-center align-items-center" style="min-height: 180px;">
+                            <img src="images/axex.jpg" class="img-fluid rounded-3 shadow-sm" alt="Photo Axe X">
+                        </div>
+
+                        <p class="text-start">L’axe X correspond au déplacement horizontal (gauche / droite).</p>
+                        <p class="text-start">Ce mouvement est assuré par un moteur pas à pas, qui permet un contrôle très précis des déplacements. Contrairement à un moteur classique, le moteur pas à pas avance par petits pas, ce qui permet de connaître précisément sa position sans capteur supplémentaire.</p>
+                        <p class="text-start">Le moteur entraîne un système de transmission, généralement une courroie crantée, qui est fixée à un chariot. Ce chariot se déplace le long de rails de guidage afin de garantir un mouvement droit, stable et précis.</p>
+                        <p class="text-start mb-0">L’objectif de cet axe est de gérer le positionnement horizontal sur la largeur de la zone de travail, avec une bonne répétabilité et sans perte de précision.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="acnh-bubble p-4 h-100 shadow bg-white text-dark text-center d-flex flex-column">
+                        <div class="mb-3 mt-2">
+                            <i class="ph-duotone ph-arrows-down-up" style="font-size: 3rem; color: var(--green-main);"></i>
+                        </div>
+                        <h3 class="acnh-header mb-4">Axe Y</h3>
+                        
+                        <div class="mb-4 d-flex justify-content-center align-items-center" style="min-height: 180px;">
+                            <img src="images/axey.jpg" class="img-fluid rounded-3 shadow-sm" alt="Photo Axe Y">
+                        </div>
+
+                        <p class="text-start">L’axe Y correspond au déplacement horizontal (droite / gauche).</p>
+                        <p class="text-start">Dans notre système, un moteur pas à pas est placé à l’extrémité de la structure. Sa rotation entraîne une courroie crantée. Cette courroie est directement reliée au bloc principal qui contient le crayon ainsi que le mécanisme de l’axe Z.</p>
+                        <p class="text-start">Ainsi, lorsque le moteur tourne dans un sens ou dans l’autre, la courroie se déplace et entraîne le bloc vers la droite ou vers la gauche. Cela permet un mouvement fluide et précis sur tout l’axe.</p>
+                        <p class="text-start mb-0">Ce système est efficace car la position dépend directement de la rotation contrôlée du moteur pas à pas, ce qui permet une bonne précision et une bonne répétabilité des déplacements.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="acnh-bubble p-4 h-100 shadow bg-white text-dark text-center d-flex flex-column">
+                        <div class="mb-3 mt-2">
+                            <i class="ph-duotone ph-arrow-line-down" style="font-size: 3rem; color: var(--green-main);"></i>
+                        </div>
+                        <h3 class="acnh-header mb-4">Axe Z</h3>
+                        
+                        <div class="mb-4 d-flex justify-content-center align-items-center" style="min-height: 180px;">
+                            <img src="images/axez.jpg" class="img-fluid rounded-3 shadow-sm" alt="Photo Axe Z">
+                        </div>
+
+                        <p class="text-start">L’axe Z correspond au déplacement vertical (haut / bas) du crayon.</p>
+                        <p class="text-start">Dans notre cas, il s’agit d’un bloc qui contient un servo moteur. Ce servo est relié à un système d’engrenage (rouage) qui transforme la rotation du moteur in mouvement vertical.</p>
+                        <p class="text-start">En fonction de l’angle du servo, le rouage pivote et actionne un mécanisme qui fait monter ou descendre le support du crayon. Cela permet de contrôler précisément la position du crayon par rapport à la surface de travail.</p>
+                        <p class="text-start mb-0">Ce système est pratique car il permet un contrôle simple et précis uniquement avec l’angle du servo, ce qui facilite les phases de dessin et de déplacement sans contact.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="zoom-in">
+                <a href="conception.html" class="btn btn-acnh btn-acnh-primary rounded-pill shadow px-5 py-3 fs-5" style="background-color: var(--green-main);">
+                    <i class="ph-bold ph-cube me-2"></i>Ouvrir la Documentation Technique des Axes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="electronique" class="massive-step blue-theme section-gap">
+        <div class="container pt-7">
+            <h2 class="display-3 fw-bold text-center text-white mb-0" data-aos="fade-down">ÉLECTRONIQUE</h2>
+        </div>
+
+        <div class="problematique-focus d-flex align-items-center" style="min-height: 40vh; padding-top: 3rem; padding-bottom: 3rem;">
+            <div class="container text-center" data-aos="zoom-in">
+                <h2 class="display-4 fw-bolder text-white mb-5">De l'Arduino à la carte sur mesure</h2>
+                
+                <div class="mx-auto acnh-bubble p-5 shadow-lg bg-white text-dark text-start mb-5" style="max-width: 1100px;">
+                    <div class="row align-items-center g-5">
+                        <div class="col-md-7">
+                            <p class="fs-5 mb-3">De base, notre machine utilisait une carte Arduino Uno couplée à un "CNC Shield". C’est une solution pratique pour débuter et piloter les moteurs facilement.</p>
+                            <p class="fs-5 mb-3">Concrètement, cette installation nous limitait en place et en fonctionnalités, rendant par exemple très complexe l'ajout d'un écran ou d'un lecteur de carte.</p>
+                            <p class="fs-5 mb-3">L’objectif a donc été de concevoir une nouvelle carte sur mesure. Pour ça, on a remplacé l'Arduino par un ESP32, un microcontrôleur beaucoup plus performant.</p>
+                            <p class="fs-5 mb-0">Grâce à ça, on a pu regrouper tous les composants sur un seul circuit, pensé spécifiquement pour rendre la machine totalement autonome.</p>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="images/cnc_carte.png" class="img-fluid rounded-4 shadow-sm border-acnh" alt="CNC Carte">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pb-7">
+            <div class="row align-items-center mb-7 flex-row-reverse" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-5 shadow bg-white text-dark">
+                        <h3 class="acnh-header mb-4"><i class="ph-duotone ph-plug me-2" style="color: var(--blue-main);"></i> 1 - Le prototypage</h3>
+                        <p>Le prototypage est l'étape qui va nous permettre de valider le fonctionnement de notre nouvelle carte avant sa fabrication. C’est une phase de test où l'on branche temporairement tous les composants.</p>
+                        <p>Concrètement, on relie l'ESP32 avec les moteurs, l'écran ou le lecteur SD sur des plaques d'essai. Cela permet de vérifier que tout communique correctement.</p>
+                        <p>L’objectif va donc être de valider notre logique de câblage et la gestion des alimentations. Pour ça, on teste des petits codes et on observe les réactions.</p>
+                        <p class="mb-0">Grâce à ça, on évite les erreurs et on s'assure que le circuit théorique sera parfaitement functional.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-2 shadow-lg bg-white h-100 d-flex justify-content-center align-items-center">
+                        <img src="images/prototypage.jpg" class="img-fluid rounded-4" alt="Prototypage">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center mb-7" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-5 shadow bg-white text-dark">
+                        <h3 class="acnh-header mb-4"><i class="ph-duotone ph-bezier-curve me-2" style="color: var(--blue-main);"></i> 2 - Création du schéma</h3>
+                        <p>Le schéma électronique est le plan qui va nous permettre de modéliser les connexions de notre future carte. C’est la traduction informatique de notre prototype.</p>
+                        <p>Concrètement, on utilise le logiciel KiCad pour dessiner les liens entre chaque composant. Par exemple, on indique quelle broche de l'ESP32 doit être reliée à l'écran ou aux capteurs.</p>
+                        <p>L’objectif va donc être de structurer toute cette électronique de façon logique, en intégrant bien les bus de communication (comme l'I2C ou le SPI).</p>
+                        <p class="mb-0">Grâce à ça, le logiciel comprend les interactions entre les composants, ce qui prépare l'étape du dessin physique de la carte.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-2 shadow-lg bg-white h-100 d-flex justify-content-center align-items-center">
+                        <img src="images/schematic.png" class="img-fluid rounded-4" alt="Schéma KiCad">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center flex-row-reverse mb-7" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-5 shadow bg-white text-dark">
+                        <h3 class="acnh-header mb-4"><i class="ph-duotone ph-circuit-board me-2" style="color: var(--blue-main);"></i> 3 - Routage et création du PCB</h3>
+                        <p>Le routage du PCB (circuit imprimé) est l'étape finale qui va nous permettre de passer au circuit physique. On place virtuellement chaque composant et on trace les chemins en cuivre.</p>
+                        <p>Concrètement, il faut dessiner les pistes reliant les éléments tout en gérant les contraintes techniques. Par exemple, on élargit les pistes d'alimentation des moteurs pour supporter la puissance.</p>
+                        <p>L’objectif va donc être d'optimiser l'espace pour obtenir les fichiers de fabrication. Pour ça, on envoie le design terminé à un constructeur professionnel.</p>
+                        <p class="mb-0">Grâce à ça, on récupère une carte sur mesure où il ne reste plus qu'à souder les composants (CMS et traversants).</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="acnh-bubble p-2 shadow-lg bg-white h-100 d-flex justify-content-center align-items-center">
+                        <img src="images/pcb.png" class="img-fluid rounded-4" alt="PCB">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="acnh-bubble p-5 shadow-lg bg-white text-dark text-center">
+                        <h3 class="acnh-header mb-4 d-inline-block"><i class="ph-duotone ph-list-checks me-2" style="color: var(--blue-main);"></i> Spécifications et fonctionnalités</h3>
+                        <div class="text-start mx-auto mt-3" style="max-width: 900px;">
+                            <p>Pour finir, cette carte intègre plusieurs composants clés qui vont nous permettre de rendre la machine plus performante et sécurisée.</p>
+                            <p>Concrètement, elle possède deux drivers A4988 pour piloter précisément les moteurs, et un lecteur de carte SD. Ce dernier permet de lancer directement un G-code sans ordinateur branché.</p>
+                            <p class="mb-0">L'objectif a aussi été d'ajouter une interface et de la sécurité. Pour ça, on utilise un écran OLED pour l'affichage, et quatre capteurs de fin de course pour délimiter les mouvements.</p>
+                            <p class="mb-0">Grâce à ça, la machine peut trouver son point d'origine de manière automatique (homing) et dessiner en totale autonomie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="zoom-in">
+                <a href="electronique.html" class="btn btn-acnh btn-acnh-primary rounded-pill shadow px-5 py-3 fs-5" style="background-color: var(--blue-main);">
+                    <i class="ph-bold ph-circuit-board me-2"></i>Ouvrir la Documentation Électronique Complète
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-6 text-center mb-5" data-aos="zoom-in">
+        <h3 class="acnh-header mb-5 d-inline-block px-4">Pour aller plus loin...</h3>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-4 mt-3">
+            <a href="prototypes.html" class="btn btn-acnh btn-acnh-secondary rounded-pill shadow px-5 py-3 fs-5">
+                <i class="ph-bold ph-images me-2"></i>Voir nos Prototypes
+            </a>
+            <a href="difficultes.html" class="btn btn-acnh btn-acnh-primary rounded-pill shadow px-5 py-3 fs-5" style="background-color: var(--amber-acc);">
+                <i class="ph-bold ph-warning-circle me-2"></i>Nos Difficultés
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-5 text-center opacity-50">
+        <p>© 2026 Groupe 10 - Makerspace Amiens</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>

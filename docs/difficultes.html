@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difficultés | G10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top: 80px;">
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GROUPE 10</a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-acnh btn-acnh-primary rounded-pill btn-sm">
+                    <i class="ph-bold ph-arrow-left me-2"></i>Retour
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-3 fw-bold" style="color: var(--amber-acc);">Nos Difficultés</h1>
+            <p class="lead opacity-75">Les défis que nous avons dû surmonter tout au long du projet.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-8">
+                <div class="acnh-bubble p-5 shadow-sm amber-theme mb-4">
+                    <h3 class="acnh-header mb-3"><i class="ph-duotone ph-wrench me-2"></i>Défis Mécaniques</h3>
+                    <p>Nous avons rencontré plusieurs difficultés concernant la conception des pièces 3D, notamment pour trouver les bonnes tolérances d'impression pour que les pièces coulissent parfaitement sans trop de jeu.</p>
+                </div>
+
+                <div class="acnh-bubble p-5 shadow-sm purple-theme mb-4">
+                    <h3 class="acnh-header mb-3"><i class="ph-duotone ph-code me-2"></i>Défis Programmation</h3>
+                    <p>La génération du G-Code et son interprétation par la machine ont été complexes. Il a fallu ajuster de nombreux paramètres dans Inkscape pour obtenir un tracé propre et à la bonne échelle.</p>
+                </div>
+
+                <div class="acnh-bubble p-5 shadow-sm blue-theme">
+                    <h3 class="acnh-header mb-3"><i class="ph-duotone ph-circuit-board me-2"></i>Défis Électroniques</h3>
+                    <p>Le passage de l'Arduino à l'ESP32 sur notre propre carte PCB a demandé beaucoup de temps de recherche pour comprendre le routage, la gestion des alimentations et éviter les courts-circuits.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
