@@ -1,0 +1,100 @@
+/* VARIABLES */
+:root {
+    --acnh-bg: #fdfaf0;
+    --acnh-text: #6d4c41;
+    --acnh-border: #e8e2c8;
+    --white: #ffffff;
+    --blue-main: #5bc0de; --blue-acc: #2e86de;
+    --green-main: #78bc61; --green-acc: #58a342;
+    --purple-main: #a55eea; --purple-acc: #8854d0;
+    --amber-main: #f7b731; --amber-acc: #fa8231;
+}
+
+body {
+    background-color: var(--acnh-bg);
+    color: var(--acnh-text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 4px solid var(--acnh-border);
+    border-radius: 0 0 30px 30px;
+}
+.nav-link { font-weight: 800; color: var(--acnh-text) !important; }
+
+/* HERO */
+.hero-section {
+    background: linear-gradient(135deg, #aed581 0%, #4facfe 100%);
+    padding: 160px 0 120px;
+    border-bottom: 12px solid var(--green-main);
+    border-bottom-left-radius: 80px; border-bottom-right-radius: 80px;
+}
+
+/* BULLES */
+.acnh-bubble {
+    background: var(--white);
+    border: 4px solid var(--acnh-border);
+    border-radius: 40px 60px 35px 55px;
+}
+.acnh-header {
+    font-family: 'Varela Round', sans-serif;
+    border-bottom: 3px dashed var(--acnh-border);
+    padding-bottom: 15px;
+}
+
+/* ÉQUIPE */
+.member-photo-circle {
+    width: 120px; height: 120px;
+    background-color: #eee7d1;
+    border-radius: 50%; border: 5px solid white;
+    overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+.member-photo-circle img { width: 100%; height: 100%; object-fit: cover; }
+.member-photo-circle i { font-size: 3rem; color: var(--acnh-border); }
+
+/* SECTIONS MASSIVES */
+.massive-step { 
+    color: white; 
+    position: relative; 
+    border-radius: 60px; 
+    padding-bottom: 5rem; /* AJOUT DU GAP INTERNE EN BAS */
+}
+.section-gap { margin-top: 5rem; margin-bottom: 5rem; }
+
+.blue-theme { --theme: var(--blue-main); --theme-acc: var(--blue-acc); }
+.green-theme { --theme: var(--green-main); --theme-acc: var(--green-acc); }
+.purple-theme { --theme: var(--purple-main); --theme-acc: var(--purple-acc); }
+.amber-theme { --theme: var(--amber-main); --theme-acc: var(--amber-acc); }
+
+.massive-step { background: linear-gradient(135deg, var(--theme) 0%, var(--theme-acc) 100%); }
+
+/* FOCUS PROBLÉMATIQUE */
+.problematique-focus {
+    min-height: 80vh;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0) 75%);
+}
+.problematique-focus h2 {
+    font-size: 4.5rem; letter-spacing: -2px; line-height: 1.1;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ANIMATIONS */
+.massive-icon-pulse { font-size: 4rem; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-15px);} }
+.massive-icon-mini { font-size: 10rem; margin-top: 20px; }
+
+/* BOUTONS */
+.btn-acnh { border: 4px solid rgba(0,0,0,0.1) !important; font-weight: 800; padding: 15px 35px; }
+.btn-acnh-primary { background: var(--blue-main); color: white !important; }
+.btn-acnh-secondary { background: var(--green-main); color: white !important; }
+
+/* ESPACEMENT */
+.py-7 { padding: 8rem 0; }
+.pb-7 { padding-bottom: 5rem !important; } /* S'assure que le contenu ne touche pas le bas */
+.mb-7 { margin-bottom: 7rem !important; }
+.border-acnh { border: 4px dashed var(--acnh-border) !important; }
+code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; color: var(--purple-acc); }
