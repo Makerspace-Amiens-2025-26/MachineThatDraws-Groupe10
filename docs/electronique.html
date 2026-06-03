@@ -115,13 +115,10 @@
 
             <div class="row g-4 align-items-stretch">
                 <div class="col-12">
-                    <div class="p-4 bg-white rounded-4 shadow-sm border-acnh d-flex flex-column flex-md-row gap-4 align-items-center">
-                        <div class="flex-grow-1">
-                            <h4 class="fw-bold mb-3"><i class="ph-fill ph-cpu me-2" style="color: #6f42c1;"></i>La Tension Logique (3.3V)</h4>
-                            <p>L'ESP32-S3 fonctionne avec des signaux logiques de 3.3V (0V = état bas, 3.3V = état haut). Cette tension est générée par la carte ESP32 elle-même (broche 3V3) et distribuée à toute l'électronique de contrôle.</p>
-                            <p class="mb-0">Elle alimente le lecteur de carte SD (VDD), l'affichage I2C, la tension de référence des drivers A4988 (broches VDD) et les résistances de pull-up pour les capteurs de fin de course. <strong>Attention :</strong> Envoyer du 5V ou du 12V sur les broches de données de l'ESP32 ou de la carte SD les grillerait instantanément.</p>
-                        </div>
-                        <img src="images/logique_3v3.jpg" class="img-fluid rounded-4 shadow-sm border-acnh" alt="Tension 3.3V" style="max-width: 300px; height: 250px; object-fit: cover;" onerror="this.src='https://placehold.co/300x250/eee/999?text=Logique+3.3V'">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border-acnh">
+                        <h4 class="fw-bold mb-3"><i class="ph-fill ph-cpu me-2" style="color: #6f42c1;"></i>La Tension Logique (3.3V)</h4>
+                        <p>L'ESP32-S3 fonctionne avec des signaux logiques de 3.3V (0V = état bas, 3.3V = état haut). Cette tension est générée par la carte ESP32 elle-même (broche 3V3) et distribuée à toute l'électronique de contrôle.</p>
+                        <p class="mb-0">Elle alimente le lecteur de carte SD (VDD), l'affichage I2C, la tension de référence des drivers A4988 (broches VDD) et les résistances de pull-up pour les capteurs de fin de course. <strong>Attention :</strong> Envoyer du 5V ou du 12V sur les broches de données de l'ESP32 ou de la carte SD les grillerait instantanément.</p>
                     </div>
                 </div>
 
@@ -129,7 +126,7 @@
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
                         <img src="images/4.7K omh.jpg" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Bus I2C" onerror="this.src='https://placehold.co/600x400/eee/999?text=Pull-up+I2C+(4.7kΩ)'">
                         <h4 class="fw-bold mb-3" style="color: #6f42c1;"><i class="ph-fill ph-monitor me-2"></i>Le bus I2C (Écran) : 4.7 kΩ</h4>
-                        <p>Les résistances R4 et R5 sont placées sur les lignes SDA et SCL de l'écran. L'I2C utilise un fonctionnement en "Drain ouvert" : les composants ne forcent jamais la ligne à 3.3V, ils la tirent à 0V pour "parler". Ce sont R4 et R5 qui ramènent la tension à 3.3V.</p>
+                        <p>Les résistances R4 et R5 sont placées sur les lignes SDA et SCL de l'écran. L'I2C utilise un fonctionnement en "Drain ouvert" : les components ne forcent jamais la ligne à 3.3V, ils la tirent à 0V pour "parler". Ce sont R4 et R5 qui ramènent la tension à 3.3V.</p>
                         <p class="mb-0"><strong>Pourquoi 4.7 kΩ ?</strong> Les pistes agissent comme de minuscules condensateurs (capacité parasite). Une résistance trop forte (ex: 100kΩ) mettrait trop de temps à remonter la tension, arrondissant le signal et rendant la vitesse floue. Trop faible (ex: 1kΩ), les puces surconsommeraient pour la tirer à 0V. 4.7 kΩ est le compromis idéal pour des signaux bien carrés à 100/400 kHz.</p>
                     </div>
                 </div>
