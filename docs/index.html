@@ -54,16 +54,7 @@
                     
                     <p>Dès le départ, nous voulions créer quelque chose d'unique, un design de machine qui nous convient et qui nous différencie. Nous sommes donc partis sur l'idée d'un <strong>"pen plotter"</strong> (traceur à stylo). Cette machine fonctionne sur le même principe qu'une imprimante, c'est-à-dire que la feuille bouge avec des barres qui vont la faire coulisser, ainsi la feuille avance.</p>
                     
-                    <p>Ce projet a donc été un véritable challenge mêlant mécanique, programmation et électronique, nous avons décidé de nous répartir les tâches stratégiquement en fonction des affinités de chacun.</p>
-
-                    <div class="border-acnh p-3 mt-4 rounded-4 bg-white-50">
-                        <h5 class="fw-bold"><i class="ph-bold ph-info me-2"></i>En bref :</h5>
-                        <ul class="list-unstyled m-0">
-                            <li><strong>Précision :</strong> Moteurs pas-à-pas Nema 17</li>
-                            <li><strong>Cerveau :</strong> Arduino Nano + Shield CNC (puis ESP32)</li>
-                            <li><strong>Logiciels :</strong> Inkscape & UGS</li>
-                        </ul>
-                    </div>
+                    <p class="mb-0">Ce projet a donc été un véritable challenge mêlant mécanique, programmation et électronique, nous avons décidé de nous répartir les tâches stratégiquement en fonction des affinités de chacun.</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -84,7 +75,7 @@
                         <img src="images/louis.jpg" alt="Louis">
                     </div>
                     <h5 class="fw-bold mb-1">Louis Bourbon</h5>
-                    <p class="small fw-bold opacity-75">Louis a été d'une grande aide pour la réalisation de la carte éléctronique et la modélisation de certaines pièces.</p>
+                    <p class="small fw-bold opacity-75">Louis a été d'une grande aide pour la réalisation de la carte électronique et la modélisation de certaines pièces.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="100">
@@ -93,7 +84,7 @@
                         <img src="images/mathis.jpg" alt="Mathis">
                     </div>
                     <h5 class="fw-bold mb-1">Mathis François</h5>
-                    <p class="small fw-bold opacity-75">Mathis a s'est vu comme le commandant du projet et à élaborer l'axe x et z en totalité, il a également participé à la partie éléctronique.</p>
+                    <p class="small fw-bold opacity-75">Mathis s'est vu comme le commandant du projet et a élaboré l'axe x et z en totalité, il a également participé à la partie électronique.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="200">
@@ -102,7 +93,7 @@
                         <img src="images/celian.jpg" alt="Célian">
                     </div>
                     <h5 class="fw-bold mb-1">Célian Daix</h5>
-                    <p class="small fw-bold opacity-75">Célian s'est démarqué dans la partie développement avec la création du site mais également dans le fait de faire fonctionner la machine. De plus il a aidé dans la partie éléctronique.</p>
+                    <p class="small fw-bold opacity-75">Célian s'est démarqué dans la partie développement avec la création du site mais également dans le fait de faire fonctionner la machine. De plus il a aidé dans la partie électronique.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="300">
@@ -111,7 +102,7 @@
                         <img src="images/alexandre.jpg" alt="Alexandre">
                     </div>
                     <h5 class="fw-bold mb-1">Alexandre Bourel</h5>
-                    <p class="small fw-bold opacity-75">Alexandre a été l'homme de l'ombre qui a élaborer l'axe y en testant et en créant de nombreux prototypes.</p>
+                    <p class="small fw-bold opacity-75">Alexandre a été l'homme de l'ombre qui a élaboré l'axe y en testant et en créant de nombreux prototypes.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg" data-aos="zoom-in" data-aos-delay="400">
@@ -120,7 +111,7 @@
                         <img src="images/soren.jpg" alt="Soren">
                     </div>
                     <h5 class="fw-bold mb-1">Soren Crëpin</h5>
-                    <p class="small fw-bold opacity-75">Soren à schematisé les différentes pièces et à contribuer à l'axe x avec Alexandre mais également sur des pièces importante de la machine.</p>
+                    <p class="small fw-bold opacity-75">Soren a schématisé les différentes pièces et a contribué à l'axe x avec Alexandre mais également sur des pièces importantes de la machine.</p>
                 </div>
             </div>
         </div>
@@ -143,14 +134,13 @@
         </div>
 
         <div class="container pb-7">
+            
             <div class="row align-items-center mb-7 flex-row-reverse" data-aos="fade-up">
                 <div class="col-lg-6">
                     <div class="acnh-bubble p-5 shadow bg-white text-dark">
-                        <h3 class="acnh-header mb-3">Qu'est-ce que le G-Code ?</h3>
-                        <p>Le G-code est l’outil principal qui va nous permettre de faire fonctionner une machine à commande numérique (imprimante 3D, CNC, laser, etc.). C’est un langage universel utilisé par les machines, ce qui veut dire qu’il est compréhensible par la majorité d’entre elles.</p>
-                        <p>Concrètement, le G-code est composé de lignes d’instructions. Chaque ligne correspond à une action précise, le plus souvent un déplacement de la machine. Par exemple, une ligne peut dire à la machine d’aller à une position donnée selon des coordonnées (X, Y, Z), ou encore de régler une vitesse ou d’activer un outil.</p>
-                        <p>L’objectif va donc être de convertir une image, un dessin ou un modèle 3D en G-code. Pour ça, on utilise un logiciel qui transforme les coordonnées vectorielles du modèle en une suite d’instructions que la machine peut comprendre.</p>
-                        <p class="mb-0">Grâce à ça, la machine est capable de reproduire physiquement ce qu’on a conçu sur ordinateur, en suivant précisément chaque mouvement défini dans le G-code.</p>
+                        <h3 class="acnh-header mb-3">Le langage universel : le G-Code</h3>
+                        <p>Le G-code est l’outil principal qui permet de faire fonctionner les machines à commande numérique (CNC). C’est un langage composé de lignes d’instructions séquentielles.</p>
+                        <p class="mb-0">Chaque ligne correspond à une action précise : un déplacement vers des coordonnées exactes (X, Y, Z), le réglage d'une vitesse, ou l'activation d'un outil (comme la levée de notre stylo). C'est ce fichier qui fait le lien direct entre le monde numérique et le mouvement physique.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -163,11 +153,9 @@
             <div class="row align-items-center mb-7" data-aos="fade-up">
                 <div class="col-lg-6">
                     <div class="acnh-bubble p-5 shadow bg-white text-dark">
-                        <h3 class="acnh-header mb-3">Comment générer le G-code ?</h3>
-                        <p>Pour générer le G-code, on va utiliser un logiciel comme Inkscape. L’objectif c’est de convertir un dessin (souvent en SVG) en trajectoires que la machine va pouvoir suivre.</p>
-                        <p>En effet, on commence par importer ou créer un dessin dans Inkscape. Si on part d’une image classique (png, jpg), il faut d’abord la transformer en tracé vectoriel pour avoir des lignes exploitables. Ensuite, on verifies que le dessin est propre, parce que la machine va suivre exactement les tracés.</p>
-                        <p>On va ensuite utiliser une extension comme G-code Tools, qui permet de transformer le dessin en G-code. On configure quelques paramètres comme la vitesse, les axes ou les dimensions de la machine.</p>
-                        <p class="mb-0">L’objectif va donc être de convertir le dessin en une suite d’instructions compréhensibles par la machine. Une fois le G-code généré, il suffit de l’envoyer à la machine pour qu’elle puisse exécuter les déplacements et reproduire le dessin.</p>
+                        <h3 class="acnh-header mb-3">De l'image au tracé</h3>
+                        <p>Pour que la machine comprenne un dessin, il ne suffit pas de lui envoyer une image classique. Nous utilisons le logiciel vectoriel <strong>Inkscape</strong> pour transformer l'image en tracés géométriques (des vecteurs).</p>
+                        <p class="mb-0">Une fois vectorisé et mis à la bonne échelle, le dessin est converti en G-code grâce à une extension spécifique qui va calculer précisément le parcours physique que devra suivre le stylo.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -180,12 +168,9 @@
             <div class="row align-items-center flex-row-reverse mb-5" data-aos="fade-up">
                 <div class="col-lg-6">
                     <div class="acnh-bubble p-5 shadow bg-white text-dark">
-                        <h3 class="acnh-header mb-3">Exploiter le G-code</h3>
-                        <p>Pour finir, on va maintenant chercher à exploiter ce G-code pour faire fonctionner la machine. Pour cela, on utilise une application comme Universal Gcode Sender.</p>
-                        <p>En effet, ce logiciel va nous permettre d’envoyer le fichier G-code directement à la machine et de contrôler son exécution. On peut se connecter à la machine, charger le fichier, et lancer les instructions.</p>
-                        <p>Chaque ligne du G-code va alors être lue et exécutée en temps réel, ce qui va permettre à la machine de se déplacer et de reproduire le dessin défini précédemment.</p>
-                        <p>On peut aussi surveiller le bon déroulement, ajuster certains paramètres et arrêter la machine si nécessaire.</p>
-                        <p class="mb-0">L’objectif ici est donc de faire le lien entre le fichier G-code généré et la machine réelle, afin de passer de la théorie à l’exécution.</p>
+                        <h3 class="acnh-header mb-3">Le contrôle de la machine</h3>
+                        <p>Pour piloter la machine et exécuter le dessin, nous utilisons une interface de contrôle sur ordinateur, comme <strong>Universal Gcode Sender (UGS)</strong>.</p>
+                        <p class="mb-0">Ce logiciel permet non seulement de calibrer les axes et de déplacer la machine manuellement pour définir son point de départ, mais surtout d'envoyer le fichier G-code ligne par ligne à la carte électronique (équipée de son Firmware) qui l'exécutera en temps réel.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -283,7 +268,7 @@
                         </div>
 
                         <p class="text-start">L’axe Z correspond au déplacement vertical (haut / bas) du crayon.</p>
-                        <p class="text-start">Dans notre cas, il s’agit d’un bloc qui contient un servo moteur. Ce servo est relié à un système d’engrenage (rouage) qui transforme la rotation du moteur in mouvement vertical.</p>
+                        <p class="text-start">Dans notre cas, il s’agit d’un bloc qui contient un servo moteur. Ce servo est relié à un système d’engrenage (rouage) qui transforme la rotation du moteur en un mouvement vertical.</p>
                         <p class="text-start">En fonction de l’angle du servo, le rouage pivote et actionne un mécanisme qui fait monter ou descendre le support du crayon. Cela permet de contrôler précisément la position du crayon par rapport à la surface de travail.</p>
                         <p class="text-start mb-0">Ce système est pratique car il permet un contrôle simple et précis uniquement avec l’angle du servo, ce qui facilite les phases de dessin et de déplacement sans contact.</p>
                     </div>
@@ -333,7 +318,7 @@
                         <p>Le prototypage est l'étape qui va nous permettre de valider le fonctionnement de notre nouvelle carte avant sa fabrication. C’est une phase de test où l'on branche temporairement tous les composants.</p>
                         <p>Concrètement, on relie l'ESP32 avec les moteurs, l'écran ou le lecteur SD sur des plaques d'essai. Cela permet de vérifier que tout communique correctement.</p>
                         <p>L’objectif va donc être de valider notre logique de câblage et la gestion des alimentations. Pour ça, on teste des petits codes et on observe les réactions.</p>
-                        <p class="mb-0">Grâce à ça, on évite les erreurs et on s'assure que le circuit théorique sera parfaitement functional.</p>
+                        <p class="mb-0">Grâce à ça, on évite les erreurs et on s'assure que le circuit théorique sera parfaitement fonctionnel.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -383,9 +368,7 @@
                         <h3 class="acnh-header mb-4 d-inline-block"><i class="ph-duotone ph-list-checks me-2" style="color: var(--blue-main);"></i> Spécifications et fonctionnalités</h3>
                         <div class="text-start mx-auto mt-3" style="max-width: 900px;">
                             <p>Pour finir, cette carte intègre plusieurs composants clés qui vont nous permettre de rendre la machine plus performante et sécurisée.</p>
-                            <p>Concrètement, elle possède deux drivers A4988 pour piloter précisément les moteurs, et un lecteur de carte SD. Ce dernier permet de lancer directement un G-code sans ordinateur branché.</p>
-                            <p class="mb-0">L'objectif a aussi été d'ajouter une interface et de la sécurité. Pour ça, on utilise un écran OLED pour l'affichage, et quatre capteurs de fin de course pour délimiter les mouvements.</p>
-                            <p class="mb-0">Grâce à ça, la machine peut trouver son point d'origine de manière automatique (homing) et dessiner en totale autonomie.</p>
+                            <p class="mb-0">Concrètement, elle possède deux drivers A4988 pour piloter précisément les moteurs, et un lecteur de carte SD. Ce dernier permet de lancer directement un G-code sans ordinateur branché.</p>
                         </div>
                     </div>
                 </div>
@@ -403,10 +386,7 @@
         <h3 class="acnh-header mb-5 d-inline-block px-4">Pour aller plus loin...</h3>
         <div class="d-flex flex-column flex-sm-row justify-content-center gap-4 mt-3">
             <a href="prototypes.html" class="btn btn-acnh btn-acnh-secondary rounded-pill shadow px-5 py-3 fs-5">
-                <i class="ph-bold ph-images me-2"></i>Voir nos Prototypes
-            </a>
-            <a href="difficultes.html" class="btn btn-acnh btn-acnh-primary rounded-pill shadow px-5 py-3 fs-5" style="background-color: var(--amber-acc);">
-                <i class="ph-bold ph-warning-circle me-2"></i>Nos Difficultés
+                <i class="ph-bold ph-images me-2"></i>Nos Photos
             </a>
         </div>
     </section>
