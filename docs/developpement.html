@@ -16,7 +16,7 @@
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">GROUPE 10</a>
             <div class="ms-auto">
-                <a href="index.html#dev" class="btn btn-acnh btn-acnh-secondary rounded-pill btn-sm">
+                <a href="index.html#dev" class="btn btn-acnh btn-acnh-primary rounded-pill btn-sm" style="background-color: var(--purple-main);">
                     <i class="ph-bold ph-arrow-left me-2"></i>Retour au site
                 </a>
             </div>
@@ -25,53 +25,110 @@
 
     <div class="container py-5">
         <div class="text-center mb-6" data-aos="fade-down">
-            <h1 class="display-3 fw-bold" style="color: #8a2be2;">Filière Logicielle & Algorithmes</h1>
-            <p class="lead opacity-75">Le parcours complet de la conversion vectorielle jusqu'aux signaux moteurs de la machine.</p>
+            <h1 class="display-3 fw-bold" style="color: var(--purple-main);">Développement Logiciel</h1>
+            <p class="lead opacity-75 mx-auto mt-4" style="max-width: 1000px; text-align: justify;">
+                Pour la partie développement de la machine, il ya 3 étapes. Dans un premier temps, il nous faut un logiciel qui va s'installer directement sur notre carte électronique : c'est lui qui va servir de cerveau pour piloter la machine et faire tourner les moteurs. Ensuite, il nous faut un autre logiciel, cette fois-ci sur l'ordinateur, qui va nous permettre de contrôler la machine manuellement et de lui envoyer notre dessin à réaliser. Enfin, pour que la machine sache exactement quoi tracer, il nous faut un outil capable de transformer une image classique en un fichier de commandes physiques que la carte peut comprendre : c'est ce qu'on appelle la génération du fichier G-code. Voici comment nous avons mis tout cela en place.
+            </p>
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-6" data-aos="zoom-in">
-                <div class="acnh-bubble p-5 h-100 shadow-sm purple-theme text-dark">
-                    <h3 class="acnh-header mb-4"><i class="ph-duotone ph-terminal-window me-2"></i>Structure et syntaxe G-Code</h3>
-                    <p>Le G-code est l'ossature logique de notre traceur. Chaque commande envoyée correspond à des coordonnées cartésiennes précises interprétées en temps réel.</p>
-                    <div class="bg-dark text-success p-3 rounded-3 font-monospace small mb-3">
-                        G21 ; Configuration des dimensions en mm<br>
-                        G90 ; Positionnement absolu<br>
-                        G0 X10.0 Y25.0 ; Déplacement rapide sans dessiner<br>
-                        G1 X50.0 Y25.0 F1200 ; Trait rectiligne à vitesse constante
+        <div class="acnh-bubble p-5 shadow-sm purple-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-cpu me-2"></i>1. Les Firmwares : GRBL et FluidNC</h2>
+            <p class="text-center mb-5 font-semibold opacity-75">Au cours de ce projet, nous avons travaillé avec deux configurations matérielles différentes, nécessitant l'utilisation de deux firmwares distincts : la carte CNC Shield, basée sur Arduino, et la carte sur mesure ESP32-S3 Uno.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/grblupload.png" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Illustration GRBL Upload" onerror="this.src='https://placehold.co/600x400/eee/999?text=Image+introuvable'">
+                        
+                        <h4 class="fw-bold mb-3" style="color: var(--purple-main);"><i class="ph-fill ph-code me-2"></i>Pour la CNC Shield : GRBL</h4>
+                        <p style="text-align: justify; text-justify: inter-word;">Pour la CNC Shield, nous avons utilisé GRBL, un firmware open source de référence et extrêmement performant pour le contrôle de mouvement via des microcontrôleurs comme l'Arduino Uno. Son installation s'effectue via l'environnement de développement Arduino IDE, qui permet d'écrire et de téléverser du code C/C++ sur des cartes électroniques.</p>
+                        <p class="mb-0" style="text-align: justify; text-justify: inter-word;">Dans un premier temps, il faut télécharger le code source au format ZIP depuis la page GitHub officielle du projet. Ce dossier est ensuite importé manuellement dans le logiciel Arduino. Une fois la bibliothèque intégrée, il suffit de naviguer dans les exemples fournis pour ouvrir le fichier nommé "grblUpload.ino". Ce fichier contient le logiciel principal prêt à être compilé et téléversé sur la carte Arduino. À l'issue de cette opération, la carte devient capable d'interpréter nativement les instructions de déplacement.</p>
                     </div>
-                    <p class="mb-0">Ce langage universel fait la passerelle entre l'image virtuelle et le cadençage précis des moteurs physiques.</p>
                 </div>
-            </div>
 
-            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                <div class="acnh-bubble p-5 h-100 shadow-sm teal-theme text-dark">
-                    <h3 class="acnh-header mb-4"><i class="ph-duotone ph-vector me-2"></i>Post-Traitement Vectoriel via Inkscape</h3>
-                    <p>Pour assurer la fluidité mécanique, l'image vectorielle doit être minutieusement nettoyée de ses nœuds parasites :</p>
-                    <ul class="mb-3">
-                        <li>Vérification manuelle des tracés fermés et chemins d'exécution.</li>
-                        <li>Utilisation de l'extension <em>G-code Tools</em> pour le calcul précis des trajectoires d'outils.</li>
-                        <li>Génération de fichiers optimisés en interpolations linéaires.</li>
-                    </ul>
-                    <p class="mb-0">Les paramètres critiques comme la vitesse de translation et la gestion des micro-pauses y sont entièrement configurés.</p>
-                </div>
-            </div>
-
-            <div class="col-12" data-aos="fade-up">
-                <div class="acnh-bubble p-5 shadow-sm amber-theme text-dark">
-                    <div class="row align-items-center g-4">
-                        <div class="col-lg-8">
-                            <h3 class="acnh-header mb-4"><i class="ph-duotone ph-broadcast me-2"></i>Flux de données avec Universal Gcode Sender</h3>
-                            <p>UGS (Universal Gcode Sender) joue le rôle d'interface de commande en temps réel entre l'ordinateur et le microcontrôleur. Il s'assure d'encapsuler et de pousser chaque bloc de texte sérialisé sans perte de paquets.</p>
-                            <p class="mb-0">Il permet également un contrôle visuel direct sur les coordonnées de travail (Work Coordinate System), assurant un retour constant sur la position physique de l'outil et permettant l'interruption sécurisée du processus en cas d'anomalie.</p>
-                        </div>
-                        <div class="col-lg-4 text-center">
-                            <img src="images/gcode.png" class="img-fluid rounded-4 shadow-sm border-acnh" alt="Flux UGS" style="max-height: 200px;">
-                        </div>
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/fluidnc.png" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Illustration FluidNC" onerror="this.src='https://placehold.co/600x400/eee/999?text=Image+introuvable'">
+                        
+                        <h4 class="fw-bold mb-3" style="color: var(--purple-main);"><i class="ph-fill ph-wifi-high me-2"></i>Pour la carte sur mesure : FluidNC</h4>
+                        <p style="text-align: justify; text-justify: inter-word;">En ce qui concerne notre carte électronique sur mesure basée sur un ESP32-S3, nous avons opté pour FluidNC. Il s'agit de l'évolution moderne de GRBL, spécialement optimisée pour les processeurs ESP32 et se distinguant par sa connectivité sans fil.</p>
+                        <p class="mb-0" style="text-align: justify; text-justify: inter-word;">L'installation se fait en téléchargeant le firmware depuis le site web officiel de FluidNC, puis en le flashant directement sur la carte. Une fois installé, l'ESP32 génère son propre réseau Wi-Fi. En s'y connectant, on accède à une interface web intégrée qui permet de configurer les broches et les différents paramètres de la machine, comme la calibration, le tout sans avoir besoin de recompiler le code source.</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="acnh-bubble p-5 shadow-sm blue-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-desktop me-2"></i>2. Le Logiciel de Contrôle : Universal Gcode Sender (UGS)</h2>
+            <p class="text-center mb-5 font-semibold opacity-75">Une fois la carte programmée, il est nécessaire d'utiliser un logiciel sur l'ordinateur pour piloter la machine en temps réel et exécuter les fichiers de dessin. Nous avons choisi Universal Gcode Sender (UGS), un logiciel open source qui sert d'interface homme-machine.</p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/jog_controler.png" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: cover; width: 100%;" alt="Illustration Jog Controller" onerror="this.src='https://placehold.co/600x400/eee/999?text=Image+introuvable'">
+                        
+                        <h4 class="fw-bold mb-3" style="color: var(--blue-acc);"><i class="ph-fill ph-game-controller me-2"></i>Mouvements et Gestion de l'Axe Z</h4>
+                        <p class="mb-0" style="text-align: justify; text-justify: inter-word;">Ce logiciel intègre notamment un contrôleur manuel appelé "Jog Controller". Celui-ci permet de tester et de vérifier les mouvements des axes X et Y à l'aide des moteurs pas à pas, s'assurant ainsi que la mécanique répond correctement. De plus, UGS permet le contrôle du servomoteur gérant l'axe Z, c'est-à-dire le mécanisme pour lever et baisser le crayon. Dans l'onglet de commande du logiciel, nous pouvons modifier l'angle du bras du servomoteur en envoyant des instructions spécifiques. Par exemple, la commande "M3" suivie de la valeur de l'angle permet de baisser le crayon, tandis que d'autres commandes permettent de le relever.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-acnh d-flex flex-column">
+                        <img src="images/step_calibration.png" class="img-fluid rounded-3 mb-4 border-acnh" style="height: 220px; object-fit: contain; background-color: #f8f9fa; width: 100%;" alt="Illustration Calibration" onerror="this.src='https://placehold.co/600x400/eee/999?text=En+attente+de+l%27image+calibration'">
+                        
+                        <h4 class="fw-bold mb-3" style="color: var(--blue-acc);"><i class="ph-fill ph-ruler me-2"></i>L'Étape Critique de la Calibration</h4>
+                        <p class="mb-0" style="text-align: justify; text-justify: inter-word;">UGS gère également l'étape critique de la calibration de la machine, indispensable pour s'assurer qu'un centimètre demandé dans le logiciel corresponde exactement à un déplacement physique d'un centimètre en pratique. Dans l'onglet dédié à la calibration de l'assistant de configuration, le logiciel permet de comparer les déplacements demandés avec les mesures réelles. En entrant ces valeurs, UGS calcule et enregistre automatiquement les bons paramètres matériels pour les moteurs pas à pas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm green-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-bezier-curve me-2"></i>3. La Génération du fichier de dessin : Inkscape</h2>
+            
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border-acnh h-100 d-flex flex-column justify-content-center">
+                        <h4 class="fw-bold mb-3" style="color: var(--green-acc);"><i class="ph-fill ph-file-text me-2"></i>Le Format G-code</h4>
+                        <p style="text-align: justify; text-justify: inter-word;">Avant de lancer l'impression, il faut créer le parcours de l'outil, stocké dans un fichier au format G-code. Ce format est un langage de programmation standardisé utilisé en commande numérique. Il se présente sous la forme d'un fichier texte contenant une suite d'instructions séquentielles, comme des coordonnées ou des commandes d'activation, indiquant précisément à la machine comment elle doit se déplacer pour reproduire un dessin.</p>
+                        
+                        <h4 class="fw-bold mb-3 mt-3" style="color: var(--green-acc);"><i class="ph-fill ph-bounding-box me-2"></i>Préparation et Vectorisation dans Inkscape</h4>
+                        <p style="text-align: justify; text-justify: inter-word;">Pour générer ce fichier à partir d'une image, nous utilisons le logiciel de dessin vectoriel open source Inkscape. La première étape consiste à configurer le document dans les propriétés pour définir la taille de la feuille de travail. Il est impératif de s'assurer que l'échelle de l'image et du document est définie sur un, afin que les dimensions finales soient correctes une fois exportées dans UGS. Ensuite, étant donné que les machines CNC ne comprennent pas les images matricielles composées de pixels, il faut vectoriser notre image. Cette action permet de la transformer en un ensemble de vecteurs et de courbes géométriques qui vont établir le tracé physique du stylo.</p>
+                        
+                        <h4 class="fw-bold mb-3 mt-3" style="color: var(--green-acc);"><i class="ph-fill ph-gear-six me-2"></i>Paramétrage avec l'Extension Laser</h4>
+                        <p class="mb-0" style="text-align: justify; text-justify: inter-word;">Une fois l'image convertie, il est nécessaire de paramétrer la génération du G-code. Pour cela, nous utilisons une extension spécifique appelée "J Tech Community Laser Tool", qui doit être installée manuellement. Bien qu'elle soit conçue à l'origine pour la gravure laser, nous l'avons paramétrée en remplaçant les commandes d'allumage du laser par nos commandes de servomoteur afin de lever et baisser le crayon de manière adéquate. Une fois le répertoire de sauvegarde renseigné et l'extension appliquée, Inkscape génère notre fichier G-code complet.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 d-flex flex-column gap-4 justify-content-center">
+                    <div class="p-2 bg-white rounded-4 shadow-sm border-acnh text-center">
+                        <img src="images/vectoriser.png" class="img-fluid rounded-4 w-100" style="height: 240px; object-fit: cover;" alt="Illustration Inkscape Vectorisation" onerror="this.src='https://placehold.co/500x300/eee/999?text=Image+introuvable'">
+                    </div>
+                    
+                    <div class="p-2 bg-white rounded-4 shadow-sm border-acnh text-center">
+                        <img src="images/extension.png" class="img-fluid rounded-4 w-100" style="height: 240px; object-fit: cover;" alt="Illustration Extension J Tech" onerror="this.src='https://placehold.co/500x300/eee/999?text=Image+introuvable'">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm amber-theme mb-4" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-rocket-launch me-2"></i>4. Lancement de la machine</h2>
+            
+            <div class="row align-items-center g-4">
+                <div class="col-md-5 text-center">
+                    <img src="images/machine_en_marche.png" class="img-fluid rounded-4 shadow border-acnh w-100" style="height: 250px; object-fit: cover;" alt="Illustration Lancement Machine" onerror="this.src='https://placehold.co/400x300/eee/999?text=Image+introuvable'">
+                </div>
+                <div class="col-md-7">
+                    <div class="p-4 bg-white rounded-4 shadow-sm border-acnh">
+                        <p class="fs-5 mb-0" style="text-align: justify; text-justify: inter-word; color: var(--acnh-text);">
+                            La dernière étape de notre processus consiste à relier l'ensemble de la chaîne logicielle pour lancer le dessin. Après avoir ouvert Universal Gcode Sender et connecté la machine, il faut placer manuellement le chariot à son point de départ et définir cette position comme le zéro de travail. Ensuite, le fichier G-code précédemment généré via Inkscape est importé dans le logiciel. Il ne reste alors plus qu'à lancer la machine. UGS transmet progressivement les instructions à la carte électronique, et la machine commence à dessiner l'image avec précision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
