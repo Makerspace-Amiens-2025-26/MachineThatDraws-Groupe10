@@ -165,6 +165,176 @@
                 </div>
             </div>
         </div>
+
+        <div class="acnh-bubble p-5 shadow-sm blue-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-list-numbers me-2"></i>Liste des éléments présents sur la carte</h2>
+            <p class="text-center mb-4">Inventaire exhaustif des 29 références physiques présentes sur le circuit imprimé.</p>
+            
+            <div class="table-responsive bg-white rounded-4 p-2 border-acnh">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col" class="py-3 px-3">Réf.</th>
+                            <th scope="col" class="py-3 px-3">Composant</th>
+                            <th scope="col" class="py-3 px-3">Modèle / Valeur</th>
+                            <th scope="col" class="py-3 text-center">Qté</th>
+                            <th scope="col" class="py-3 px-3">Rôle / Explication</th>
+                        </tr>
+                    </thead>
+                    <tbody class="border-top-0">
+                        <tr>
+                            <td class="px-3 fw-bold">U1</td>
+                            <td class="px-3">Microcontrôleur</td>
+                            <td class="px-3">ESP32-S3-UNO</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Cerveau de la carte. Lit le G-Code, contrôle les périphériques et calcule les déplacements.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">A1, A2</td>
+                            <td class="px-3">Driver Moteur</td>
+                            <td class="px-3">Module-A4988</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Contrôleurs de puissance. Permettent de piloter précisément les moteurs Nema 17.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">U2</td>
+                            <td class="px-3">Convertisseur DC/DC</td>
+                            <td class="px-3">R-78E5.0-1.0</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Régulateur. Abaisse la tension 12V en 5V propre pour alimenter la logique.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">J1</td>
+                            <td class="px-3">Lecteur Micro-SD</td>
+                            <td class="px-3">SD_Card_Device</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Emplacement pour insérer la carte SD. Communique via le bus SPI.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">J2</td>
+                            <td class="px-3">Prise Alim Jack</td>
+                            <td class="px-3">Barrel_Jack_Switch</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Port principal d'entrée de l'alimentation électrique (12V).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">J3, J4</td>
+                            <td class="px-3">Connecteur "Switch"</td>
+                            <td class="px-3">Conn_01x03</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Connecteurs (3 broches) pour les interrupteurs de fin de course (Endstops).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">J5, J6</td>
+                            <td class="px-3">Connecteur Moteur</td>
+                            <td class="px-3">Conn_01x04</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Connecteurs (4 broches) pour brancher directement les moteurs X et Y.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">J7</td>
+                            <td class="px-3">Bornier à vis</td>
+                            <td class="px-3">Arrêt d'urgence</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Bornier de sécurité. Permet d'insérer un bouton pour couper l'alimentation.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">J8</td>
+                            <td class="px-3">Connecteur Servo</td>
+                            <td class="px-3">Conn_01x03</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Prise dédiée au servomoteur (Axe Z) gérant la levée/descente du stylo.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">J9, J10</td>
+                            <td class="px-3">Cavaliers (Jumpers)</td>
+                            <td class="px-3">Conn_02x03</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Blocs de 6 picots pour configurer la résolution (Micro-stepping) des drivers A4988.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">Display1</td>
+                            <td class="px-3">Connecteur Écran</td>
+                            <td class="px-3">Conn_01x04</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Connecteur pour brancher l'écran OLED via le bus I2C.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">F1</td>
+                            <td class="px-3">Fusible</td>
+                            <td class="px-3">Fuse</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Protection matérielle. Coupe le circuit en cas de court-circuit (surintensité).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">D1</td>
+                            <td class="px-3">Voyant LED</td>
+                            <td class="px-3">LED</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Indicateur pour confirmer que la carte est bien sous tension (5V).</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">R3</td>
+                            <td class="px-3">Résistance</td>
+                            <td class="px-3">1K Ω</td>
+                            <td class="text-center fw-bold">1</td>
+                            <td class="px-3">Limite le courant de la LED D1 pour éviter qu'elle ne grille.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">R4, R5</td>
+                            <td class="px-3">Résistances</td>
+                            <td class="px-3">4.7K Ω</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Résistances de tirage (Pull-up) pour stabiliser les signaux SDA/SCL de l'OLED.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">R6, R7</td>
+                            <td class="px-3">Résistances</td>
+                            <td class="px-3">10K Ω</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Résistances de tirage (Pull-up) pour stabiliser les signaux du lecteur SD.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">C3, C4</td>
+                            <td class="px-3">Condensateurs Polarisés</td>
+                            <td class="px-3">100 µF</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Absorbent les pics de courant générés par les moteurs pour protéger les drivers.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">C5, C6</td>
+                            <td class="px-3">Condensateurs</td>
+                            <td class="px-3">10 µF</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Filtrage en entrée/sortie du convertisseur U2 pour lisser la tension 5V.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold">C7, C8</td>
+                            <td class="px-3">Condensateurs</td>
+                            <td class="px-3">10 µF</td>
+                            <td class="text-center fw-bold">2</td>
+                            <td class="px-3">Découplage pour stabiliser le courant général du système.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 fw-bold border-bottom-0">C2</td>
+                            <td class="px-3 border-bottom-0">Condensateur</td>
+                            <td class="px-3 border-bottom-0">100 nF</td>
+                            <td class="text-center fw-bold border-bottom-0">1</td>
+                            <td class="px-3 border-bottom-0">Découplage placé près de l'écran pour éliminer les parasites haute fréquence.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="mt-5 mb-5 py-5 text-center" data-aos="zoom-in" style="min-height: 60vh;">
+            <h2 class="display-4 fw-bold mb-5" style="color: var(--blue-main);">Schéma Électrique Détaillé</h2>
+            <div class="d-inline-block w-100 p-2 bg-white rounded-4 shadow-lg border-acnh">
+                <img src="images/schematic2.png" class="img-fluid rounded-3" alt="Schéma complet KiCad" style="width: 100%; object-fit: contain; min-height: 50vh; background-color: #f8f9fa;" onerror="this.src='https://placehold.co/1200x800/eee/999?text=Insérer+la+photo+du+Schéma+Ici'">
+            </div>
+            <p class="text-muted mt-4 fs-5 fw-bold"> Schematic réalisé sur KiCad.</p>
+        </div>
+
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
