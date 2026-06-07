@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critique et Améliorations | G10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top: 80px;">
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">GROUPE 10</a>
+            <div class="ms-auto">
+                <a href="index.html#electronique" class="btn btn-acnh btn-acnh-primary rounded-pill btn-sm">
+                    <i class="ph-bold ph-arrow-left me-2"></i>Retour au site
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-6" data-aos="fade-down">
+            <h1 class="display-3 fw-bold" style="color: var(--amber-acc);">Critique et Améliorations</h1>
+            <p class="lead opacity-75">Retour d'expérience et perspectives d'évolution du projet.</p>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm amber-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-rocket me-2"></i>Améliorations futures envisagées</h2>
+            
+            <div class="mb-4">
+                <h4 class="fw-bold"><i class="ph-fill ph-arrow-right me-2"></i>1. Système de guidage et réception de papier</h4>
+                <p>Actuellement, si le papier utilisé possède de grandes dimensions, le papier risque de s'enrouler ou de rencontrer des obstacles physiques en sortie. La première amélioration consisterait à concevoir un support de réception pour la feuille. Ce module permettrait de guider la feuille en sortie de machine, évitant ainsi tout blocage ou déchirement lié à une accumulation de papier, garantissant une planéité parfaite lors de l'entraînement par le cylindre X.</p>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="fw-bold"><i class="ph-fill ph-arrow-right me-2"></i>2. Ajout de capteurs de fin de course (Endstops) sur l'axe Y</h4>
+                <p>Pour automatiser le démarrage et sécuriser les déplacements, nous avons intégré deux capteurs de fin de course aux extrémités de l'axe Y. Cette configuration permet à la machine de détecter ses limites physiques de chaque côté. En couplant ces switchs à un firmware adapté (comme <em>FluidNC</em>), la machine peut effectuer un cycle de calibrage automatique dès la mise sous tension. Elle parcourt l'axe jusqu'à identifier ses butées mécaniques, supprimant ainsi tout besoin de positionnement manuel et garantissant que le chariot reste toujours dans sa zone de travail sécurisée.</p>
+            </div>
+
+            <div>
+                <h4 class="fw-bold"><i class="ph-fill ph-arrow-right me-2"></i>3. Optimisation du routage PCB et de l'ergonomie physique</h4>
+                <p>La version actuelle de notre carte électronique, bien que fonctionnelle, souffre de contraintes d'espace. Notamment, le module de lecture de carte SD a été positionné au-dessus de broches (pins) de l'ESP32 qui auraient dû rester accessibles pour des extensions futures.</p>
+            </div>
+        </div>
+
+        <div class="acnh-bubble p-5 shadow-sm purple-theme mb-5" data-aos="fade-up">
+            <h2 class="acnh-header mb-4 text-center"><i class="ph-duotone ph-warning-octagon me-2"></i>Avis critique : Ce qu'on aurait pu mieux faire</h2>
+            <p>En examinant le projet avec le recul, certains choix techniques auraient pu être optimisés pour gagner en fiabilité :</p>
+            <ul class="list-unstyled">
+                <li class="mb-3">
+                    <strong><i class="ph-bold ph-caret-right me-2"></i>Robustesse de l'électronique :</strong> Nous avons subi des défaillances sur plusieurs drivers <em>A4988</em>, causées principalement par des erreurs de manipulation lors des phases de test. Une meilleure protection (diodes de roue libre, protection contre les inversions de polarité) et une gestion plus rigoureuse des dissipateurs thermiques auraient pu éviter ces incidents.
+                </li>
+                <li class="mb-3">
+                    <strong><i class="ph-bold ph-caret-right me-2"></i>Firmware et intelligence machine :</strong> Si nous avions anticipé dès le début l'usage du firmware <strong>FluidNC</strong> (plus moderne et performant que les solutions standard), nous aurions pu intégrer nativement des fonctions avancées comme le contrôle Wi-Fi ou une gestion simplifiée des endstops.
+                </li>
+                <li class="mb-3">
+                    <strong><i class="ph-bold ph-caret-right me-2"></i>Contraintes mécaniques :</strong> L'ajout de nouvelles fonctionnalités (comme l'endstop sur l'axe Y) impose une remise en question de la structure. Cela aurait nécessité de ré-imprimer certains supports et de revoir l'encombrement global de la machine. Cette leçon nous a appris qu'en conception mécatronique, chaque ajout logiciel ou électronique doit être pensé dès la modélisation 3D initiale, sous peine de devoir redessiner l'intégralité du châssis en cours de route.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
